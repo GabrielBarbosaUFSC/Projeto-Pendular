@@ -2,7 +2,6 @@
 #include "FirstOrderFilter.h"
 
 #define POT_PIN 36 //Pino do potenciometro 
-
 #define TAU 5.0 //Constante de tempo do filtro do multimetro
 #define Y0 0.0 //Valor inicial da variavel filtrada
 

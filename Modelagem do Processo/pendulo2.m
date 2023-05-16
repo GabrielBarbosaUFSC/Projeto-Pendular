@@ -1,14 +1,14 @@
 function main
     clear all
     clc
-    teta0 = pi/18;
+    teta0 = pi/2;
     teta1 = 0;
     phi0 = 0;
     phi1 = 0;
-    em0 = 0.5*9.81*0.1*cos(teta0);
+    em0 = 0;
     
     x0 = [teta1 teta0 phi1 phi0 em0];
-    tspan = [0 20];
+    tspan = [0 5];
     options = odeset('Abstol', 1e-3);
     [t y] = ode45(@edos, tspan, x0, options);
     plot(t, y)
@@ -29,34 +29,28 @@ end
 function dxdt = edos(t, x)
     g = 9.81;
     rw = 0.035;
-    mb = 0.5;
-    mw = 0.200;
+    mb = 0.6;
+    mw = 0.2;
     l = 0.10;
-    kv = 0.005*0;
     Iw = 1/2*mw*rw^2;
-    Ib = 1/3*mb*(2*l)^2 + mb*l^2;
-    mu = 0.75*0;
+    Ib = Iw*mb/mw;
+    
+    alpha = Ib+mb*l^2;
+    beta = mb*rw^2+mw*rw^2+Iw;
+    gamma = rw*l;
+    eps = mb*g*l;
     
     teta1 = x(1);
     teta0 = x(2);
     phi1 = x(3);
     phi0 = x(4);
-    
-    Tteta = mb*g*l*sin(teta0);
-    Tphi = 0;
-    
-    Kb = mb*rw^2*phi1^2/2 + Ib*teta1^2/2;
-    Ub = mb*g*l*cos(teta0);
-    Kw = mw*rw^2*phi1^2/2 + Iw*phi1^2/2;
-    
-    dEm = (Kb + Ub + Kw) - x(5);
-    
+        
     dxdt = [
-        Tteta/(Ib);
+        (1/(alpha - gamma^2/beta*(cos(teta0))^2 ))*(eps*sin(teta0)-(gamma^2*teta1^2*sin(teta0)*cos(teta0))/(beta));
         teta1;
-        Tphi/((mb+mw)*rw^2+Iw);
+        (1/(beta - gamma^2*(cos(teta0)^2)/alpha))*(gamma*teta1^2*sin(teta0)-gamma*eps*sin(teta0)*cos(teta0)/alpha);
         phi1;
-        dEm;
+        0;
     ];
 end
     
