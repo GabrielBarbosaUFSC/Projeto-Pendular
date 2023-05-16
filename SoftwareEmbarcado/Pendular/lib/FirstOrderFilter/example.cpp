@@ -10,6 +10,7 @@ FirstOrderFilter filter(TAU, Y0);
 
 void setup(){
     Serial.begin(115200);
+    pinMode(POT_PIN, INPUT);
 }
 
 void loop(){
