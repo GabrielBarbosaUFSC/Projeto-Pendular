@@ -1,0 +1,37 @@
+# Descrição dos Códigos
+
+Este repositório contém três códigos relacionados à leitura de dados do sensor MPU6050, que possui um acelerômetro e um giroscópio embutidos.
+
+## Código 1: MPU6050_LeituraSerial.ino
+
+Este código faz a leitura dos valores de aceleração nos eixos X, Y e Z, bem como dos valores de giroscópio nos mesmos eixos, a partir do sensor MPU6050. Ele exibe os valores lidos no monitor serial.
+
+Funcionamento:
+1. O código inicia a comunicação I2C e configura o sensor MPU6050.
+2. Em seguida, ele entra em um loop contínuo.
+3. No loop, ele realiza a leitura dos registradores do sensor para obter os valores de aceleração e giroscópio.
+4. Os valores lidos são exibidos no monitor serial.
+5. Após um pequeno atraso, o loop se repete para realizar novas leituras.
+
+## Código 2: MPU6050_Library.h e MPU6050_Library.cpp
+
+Esses arquivos implementam uma biblioteca para facilitar o uso do sensor MPU6050. A biblioteca fornece funções para inicializar a comunicação com o sensor, ler os dados de aceleração e giroscópio, e obter os valores lidos.
+
+Funcionamento:
+1. O arquivo "MPU6050_Library.h" define a estrutura de dados e as declarações da classe "MPU6050".
+2. O arquivo "MPU6050_Library.cpp" implementa as funções da classe "MPU6050".
+3. A função "begin()" é usada para iniciar a comunicação com o sensor e configurá-lo.
+4. A função "readData()" lê os valores de aceleração e giroscópio dos registradores do sensor.
+5. As funções "getAcceleration()" e "getGyroscope()" retornam os valores de aceleração e giroscópio, respectivamente.
+
+## Código 3: main.cpp
+
+Este código demonstra como usar a biblioteca "MPU6050" para obter os valores de aceleração e giroscópio do sensor MPU6050 e exibi-los no monitor serial.
+
+Funcionamento:
+1. O código inclui a biblioteca "MPU6050.h" e cria um objeto da classe "MPU6050".
+2. A função "setup()" é chamada para iniciar a comunicação serial e inicializar o sensor.
+3. No loop principal, a função "readData()" é chamada para ler os valores de aceleração e giroscópio do sensor.
+4. Os valores lidos são armazenados em variáveis e exibidos no monitor serial.
+5. O loop se repete continuamente para obter e exibir os valores atualizados.
+
