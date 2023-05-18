@@ -14,6 +14,19 @@ struct dados {
 };
 */
 
+/*
+Este codigo demonstra como usar a biblioteca "MPU6050" para obter os valores de aceleração e giroscópio do sensor MPU6050 e exibi-los no monitor serial.
+
+Funcionamento:
+1. O código inclui a biblioteca "MPU6050.h" e cria um objeto da classe "MPU6050".
+2. A função "setup()" é chamada para iniciar a comunicação serial e inicializar o sensor.
+3. No loop principal, a função "readData()" é chamada para ler os valores de aceleração e giroscópio do sensor.
+4. Os valores lidos são armazenados em variáveis e exibidos no monitor serial.
+5. O loop se repete continuamente para obter e exibir os valores atualizados.
+*/
+
+
+
 MPU6050 mpu;
 
 void setup()

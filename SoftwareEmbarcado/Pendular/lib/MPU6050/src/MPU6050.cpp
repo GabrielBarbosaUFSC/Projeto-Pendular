@@ -22,10 +22,10 @@ void MPU6050::readData() {
   gyr.Z = Wire.read() << 8 | Wire.read();
 }
 
-dados MPU6050::getAcceleration() {
+Dados MPU6050::getAcceleration() {
   return acc;
 }
 
-dados MPU6050::getGyroscope() {
+Dados MPU6050::getGyroscope() {
   return gyr;
 }
