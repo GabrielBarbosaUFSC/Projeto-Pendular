@@ -2,29 +2,31 @@ using DifferentialEquations
 using Plots; plotly()
 using LinearAlgebra
 
-g = 9.81
-rw = 0.035
-mb = 1
-mw = 0.1
-l = 0.1
-Iw = 1/2*mw*rw^2
-Ib = 5*Iw
-kv = 0.005
- 
-α = Ib + mb*l^2
-β = mb*rw^2 + mw*rw^2 + Iw
-γ = mb*rw*l
-ϵ = mb*g*l
+begin
+    g = 9.81
+    rw = 0.035
+    mb = 1
+    mw = 0.5
+    l = 0.1
+    Iw = 1/2*mw*rw^2
+    Ib = 10*Iw
+    kv = 0.005
+
+    α = Ib + mb*l^2
+    β = mb*rw^2 + mw*rw^2 + Iw
+    γ = mb*rw*l
+    ϵ = mb*g*l
+end
 
 function dxdt(x, p, t)
     #Pega os estados para cada instatnte t
-    dθ = x[1]   #dΘ(t)
-    θ = x[2]    #Θ(t)
-    dΦ = x[3]   #dΦ(t)
-    Φ = x[4]    #Φ(t)
-    Δem = x[5]  #ΔEm(t)
+    dθ  =   x[1]   #dΘ(t)
+    θ   =   x[2]    #Θ(t)
+    dΦ  =   x[3]   #dΦ(t)
+    Φ   =   x[4]    #Φ(t)
+    Δem =   x[5]  #ΔEm(t)
 
-    #resolve o problema Ax = b; sendo x o vetor [d2θ, d2Φ]; conforme o sistema encontrado
+    #resolve o problema Ax = b; sendo x o vetor [d2θ, d2Φ]; conforme o  sistema encontrado
     a11 = α
     a12 = γ*cos(θ)
     a21 = γ*cos(θ)
@@ -48,19 +50,19 @@ end
 
 
 x0 = [0, 0.1, 0, 0, 0]
-tspan = (0.0, 10)
+tspan = (0.0, 0.3)
 prob = ODEProblem(dxdt, x0, tspan)
-sol  = solve(prob, Tsit5())
+sol  = solve(prob, AutoTsit5(Rosenbrock23()), reltol = 1e-10, abstol = 1e-10)
 
+show(sol.t)
+begin 
+    p1 = plot(sol.t, sol[5,:], label="ΔEm")
+    # xlims!((0,5))
+    # ylims!((-5,5))
+    p2 = plot(sol.t, sol[2,:], label="θ")
+    p3 = plot(sol.t, sol[4,:], label="Φ")
+    p4 = plot(sol.t, sol[1,:], label="dθ")
+    p5 = plot(sol.t, sol[3,:], label="dΦ")
 
-
-
-p1 = plot(t->sol(t)[5], label="ΔEm")
-xlims!((0,5))
-ylims!((-100,100))
-p2 = plot(sol.t, sol[2,:], label="θ")
-p3 = plot(sol.t, sol[4,:], label="Φ")
-p4 = plot(sol.t, sol[1,:], label="dθ")
-p5 = plot(sol.t, sol[3,:], label="dΦ")
-
-plot(p1, p2,p3, p4, p5, layout=(5,1), size = (1920, 1080))
+    plot(p1, p2,p3, p4, p5, layout=(5,1), size = (720, 480))
+end
