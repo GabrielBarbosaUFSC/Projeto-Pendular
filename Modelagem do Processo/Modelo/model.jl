@@ -13,7 +13,7 @@ begin
     l = 0.1
     Iw = 1/2*mw*rw^2
     Ib = 10*Iw
-    kv = 0.5
+    kv = 1
 
     α = Ib + mb*l^2
     β = mb*rw^2 + mw*rw^2 + Iw
@@ -38,7 +38,6 @@ function sys_iteration(pX, u)
 
     d2X = [a11 a12; a21 a22]\[b1, b2]
     d2θ, d2Φ = d2X[1], d2X[2]
-
 
     dem = α*dθ*d2θ + β*dΦ*d2Φ - ϵ*dθ*sin(θ) + γ*(d2Φ*dθ*cos(θ) + dΦ*d2θ*cos(θ) - dΦ*dθ^2*sin(θ))
     return pX + ts.*[d2θ, dθ, d2Φ, dΦ, dem]
@@ -65,17 +64,34 @@ for i in range(2, Int(time/ts))
 end
 
 #Plots
-begin
-    dθ  = x[:,1]
-    θ   = x[:,2]
-    dΦ  = x[:,3]
-    Φ   = x[:,4]
-    ΔEm = x[:,5]
 
-    p1 = plot(t, [θ, u], label=["θ" "u"])
-    p2 = plot(t, Φ, label = "Φ")
-    p3 = plot(t, [dθ, dΦ], label=["dθ" "dΦ"])
-    p4 = plot(t, ΔEm, label = "ΔEm") 
+
+function sdata(data, figsize = 1000)
+    if length(data) > 1000
+        data_out = zeros(figsize)
+        factor = trunc(Int, length(data)/figsize) - 1
+        for i in eachindex(data_out)
+            data_out[i] = data[factor*i]
+        end
+        return data_out
+    else 
+        return data
+    end
+end
+begin
+    t_  = sdata(t)
+    dθ  = sdata(x[:,1])
+    θ   = sdata(x[:,2])
+    dΦ  = sdata(x[:,3])
+    Φ   = sdata(x[:,4])
+    ΔEm = sdata(x[:,5])
+    u_  = sdata(u)
+
+
+    p1 = plot(t_, [θ, u_], label=["θ" "u"])
+    p2 = plot(t_, Φ, label = "Φ")
+    p3 = plot(t_, [dθ, dΦ], label=["dθ" "dΦ"])
+    p4 = plot(t_, ΔEm, label = "ΔEm") 
 
     plot(p1, p2, p3, p4, layout = (2, 2), size=(720, 480))
 end

@@ -10,7 +10,7 @@ begin
     l = 0.1
     Iw = 1/2*mw*rw^2
     Ib = 10*Iw
-    kv = 0.005
+    kv = 1
 
     α = Ib + mb*l^2
     β = mb*rw^2 + mw*rw^2 + Iw
@@ -50,7 +50,7 @@ end
 
 
 x0 = [0, 0.1, 0, 0, 0]
-tspan = (0.0, 0.3)
+tspan = (0.0, 10)
 prob = ODEProblem(dxdt, x0, tspan)
 sol  = solve(prob, AutoTsit5(Rosenbrock23()), reltol = 1e-10, abstol = 1e-10)
 
