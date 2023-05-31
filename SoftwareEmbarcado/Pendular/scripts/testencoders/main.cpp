@@ -1,9 +1,9 @@
 #include <Arduino.h>
 
-#define INTERRUPCAO 5
-#define SINAL_LIMPA 25
-#define BOTAO 26
-#define CONTROL_MOTOR 27
+#define INTERRUPCAO 22    // Porta que recebe o sinal do encoder
+#define SINAL_LIMPA 25    // Porta que recebe o sinal para limpar contador
+#define BOTAO 26          // Porta que recebe o sinal do botao para ligar o motor
+#define CONTROL_MOTOR 32  // Porta que comanda o motor
 
 int contador_ticks = 0;
 unsigned long tempo_ciclo = 0; 
@@ -21,13 +21,13 @@ void IRAM_ATTR limpa_conta(){
 void setup() {
   //Definindo pinos
   pinMode(INTERRUPCAO, INPUT_PULLDOWN);
-  pinMode(SINAL_LIMPA, INPUT_PULLDOWN);
+  pinMode(SINAL_LIMPA, INPUT);
   pinMode(BOTAO, INPUT);
   pinMode(CONTROL_MOTOR,OUTPUT);
 
   // Definindo interrupções
   attachInterrupt(INTERRUPCAO, conta_ticks, RISING);
-  attachInterrupt(SINAL_LIMPA, limpa_conta, RISING);
+  attachInterrupt(SINAL_LIMPA, limpa_conta, HIGH);
 
   Serial.begin(115200);
 }
@@ -41,7 +41,7 @@ void loop() {
   }
 
   // Print da quantidade de ticks do Encoder
-  if((millis() - tempo_ciclo) >= 500){
+  if((millis() - tempo_ciclo) >= 1000){
     tempo_ciclo = millis();
     Serial.print("Quantidade sinais Encoder: ");
     Serial.println(contador_ticks);
