@@ -20,8 +20,8 @@ void IRAM_ATTR limpa_conta(){
 
 void setup() {
   //Definindo pinos
-  pinMode(INTERRUPCAO, INPUT);
-  pinMode(SINAL_LIMPA, INPUT);
+  pinMode(INTERRUPCAO, INPUT_PULLDOWN);
+  pinMode(SINAL_LIMPA, INPUT_PULLDOWN);
   pinMode(BOTAO, INPUT);
   pinMode(CONTROL_MOTOR,OUTPUT);
 
