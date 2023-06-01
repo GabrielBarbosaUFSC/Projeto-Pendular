@@ -27,7 +27,7 @@ void setup() {
 
   // Definindo interrupções
   attachInterrupt(INTERRUPCAO, conta_ticks, RISING);
-  attachInterrupt(SINAL_LIMPA, limpa_conta, HIGH);
+  attachInterrupt(SINAL_LIMPA, limpa_conta, RISING);
 
   Serial.begin(115200);
 }
