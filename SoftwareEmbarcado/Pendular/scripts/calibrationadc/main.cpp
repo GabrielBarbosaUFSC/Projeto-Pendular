@@ -1,19 +1,21 @@
 #include <Arduino.h>
 
 #define PWM 17
-#define ADC 34
+#define ADC 36
 
 //Pelo processamento dos dados , coeficientes de ajuste de curva
 double coeffs[5] = {
-    - 1.805774129229885e-14,
-    + 2.1190834591191125e-10,
-    - 7.900115078925385e-7,
-    + 0.0015803653865071978,
-    0.3051748045128042
+    - 1.1458622215428729e-14,
+    + 7.402422341572887e-11,
+    - 1.6375806348536795e-7,
+    0.0009507345681822474,
+    0.11440086869494298
 };
 
 //Funcao que corrige o valor do PWM
 double read(double RAW){
+    if (RAW < 270) return 0;
+    if (RAW > 3890) return 3.3; 
     double voltage = coeffs[4];
     double raw_temp = RAW;
     for (int i = 3; i >= 0; i--){
@@ -28,14 +30,17 @@ void setup(){
     Serial.begin(115200);
     pinMode(PWM, OUTPUT);
     pinMode(ADC, INPUT);
-    // ledcSetup(0,5000,12);
-    // ledcAttachPin(PWM, 0);
+    ledcSetup(0,5000,12);
+    ledcAttachPin(PWM, 0);
+
+    ledcWrite(0, 1000);
+    delay(1000);
 }
 
 void routine(int i){
     double mean = 0;
     ledcWrite (0, i);
-    delay(60); 
+    delay(120); 
     for (int j = 0; j < 100; j ++) {
         mean += analogRead(ADC) ;
         delayMicroseconds(25);
@@ -59,7 +64,8 @@ void loop(){
     for (int i = 0; i < 100; i++)
         sum += analogRead(ADC);
     sum /= 100.0;
+    Serial.printf("\n%f\t %f", sum, read(sum));
     //Serial.println(sum);
-    Serial.println(read(sum));
+    //Serial.println(read(sum));
     delay(50);
 }
