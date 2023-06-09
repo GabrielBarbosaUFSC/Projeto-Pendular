@@ -1,33 +1,34 @@
 #include <SoftwareWire.h>
-#include <MPU6050.h>
+#include <MPU9250.h>
 
 /*
- A estrutura "dados" foi criada na lib MPU6050
- é usada para armazenar os valores de aceleração e giroscópio nos eixos X, Y e Z.
+ A estrutura "dados" foi criada na lib MPU9250
+ é usada para armazenar os valores de aceleração, giroscópio e magnetômetro nos eixos X, Y e Z.
  Cada campo da estrutura representa a leitura de 16 bits de um eixo específico.
  E tem o seguinte formato:
-
-struct dados {
+*/
+struct Dados
+{
   int16_t X;
   int16_t Y;
   int16_t Z;
 };
-*/
+
 
 /*
-Este codigo demonstra como usar a biblioteca "MPU6050" para obter os valores de aceleração e giroscópio do sensor MPU6050 e exibi-los no monitor serial.
+Este codigo demonstra como usar a biblioteca "MPU9250" para obter os valores de aceleração e giroscópio do sensor MPU9250 e exibi-los no monitor serial.
 
 Funcionamento:
-1. O código inclui a biblioteca "MPU6050.h" e cria um objeto da classe "MPU6050".
+1. O código inclui a biblioteca "MPU9250.h" e cria um objeto da classe "MPU9250".
 2. A função "setup()" é chamada para iniciar a comunicação serial e inicializar o sensor.
-3. No loop principal, a função "readData()" é chamada para ler os valores de aceleração e giroscópio do sensor.
+3. No loop principal, a função "readData()" é chamada para ler os valores de aceleração, giroscópio e magnetometro do sensor.
 4. Os valores lidos são armazenados em variáveis e exibidos no monitor serial.
 5. O loop se repete continuamente para obter e exibir os valores atualizados.
 */
 
 
 
-MPU6050 mpu;
+MPU9250 mpu;
 
 void setup()
 {
@@ -38,8 +39,9 @@ void setup()
 void loop()
 {
   mpu.readData();
-  dados accData = mpu.getAcceleration();
-  dados gyrData = mpu.getGyroscope();
+  Dados accData = mpu.getAcceleration();
+  Dados gyrData = mpu.getGyroscope();
+  Dados magData = mpu.getMagnetometer();
 
   Serial.print("Acceleration - X: ");
   Serial.print(accData.X);
@@ -54,4 +56,11 @@ void loop()
   Serial.print(gyrData.Y);
   Serial.print(" Z: ");
   Serial.println(gyrData.Z);
+
+  Serial.print("Magnetometer - X: ");
+  Serial.print(magData.X);
+  Serial.print(" Y: ");
+  Serial.print(magData.Y);
+  Serial.print(" Z: ");
+  Serial.println(magData.Z);
 }

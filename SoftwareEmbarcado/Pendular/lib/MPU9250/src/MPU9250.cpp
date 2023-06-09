@@ -1,6 +1,6 @@
 #include "MPU9250.h"
 
-void MPU6050::begin()
+void MPU9250::begin()
 {
   Wire.begin();
   Wire.beginTransmission(MPU_addr); // Endereço do MPU9250
@@ -21,14 +21,15 @@ void MPU6050::begin()
   Wire.endTransmission();
 }
 
-void MPU6050::readData()
+void MPU9250::readData()
 {
   Wire.beginTransmission(MPU_addr);
   Wire.write(0x3B);
   Wire.endTransmission(false);
-  Wire.requestFrom(MPU_addr, 14, true);
+  Wire.requestFrom(MPU_addr, 18, true);
   acc.X = Wire.read() << 8 | Wire.read();
   acc.Y = Wire.read() << 8 | Wire.read();
+  acc.Z = Wire.read() << 8 | Wire.read();
   gyr.X = Wire.read() << 8 | Wire.read();
   gyr.Y = Wire.read() << 8 | Wire.read();
   gyr.Z = Wire.read() << 8 | Wire.read();
@@ -37,12 +38,17 @@ void MPU6050::readData()
   mag.Z = Wire.read() << 8 | Wire.read();
 }
 
-Dados MPU6050::getAcceleration()
+Dados MPU9250::getAcceleration()
 {
   return acc;
 }
 
-Dados MPU6050::getGyroscope()
+Dados MPU9250::getGyroscope()
 {
   return gyr;
+}
+
+Dados MPU9250::getMagnetometer()
+{
+  return mag;
 }

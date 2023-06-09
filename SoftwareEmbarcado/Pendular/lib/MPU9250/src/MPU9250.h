@@ -1,5 +1,5 @@
-#ifndef MPU6050_h
-#define MPU6050_h
+#ifndef MPU9250_h
+#define MPU9250_h
 
 #include <Wire.h>
 
@@ -10,7 +10,7 @@ struct Dados
   int16_t Z;
 };
 
-class MPU6050
+class MPU9250
 {
 private:
   const int MPU_addr = 0x68; // I2C address
@@ -18,7 +18,7 @@ private:
   const int conf_gyro = 0;   // Configuração para ±250°/s = 0; para ±500/s = 1; para ±1000/s = 2; para ±2000/s = 3;
   Dados acc;                 // accel read
   Dados gyr;                 // gyr read
-  int16_t Tmp;               // temp read
+  Dados mag;                 // mag read
 
 public:
   /**
@@ -40,6 +40,11 @@ public:
    @brief get gyro data
   */
   Dados getGyroscope();
+
+    /**
+   @brief get mag data
+  */
+  Dados getMagnetometer();
 };
 
 #endif
