@@ -5,27 +5,7 @@
 #define ENCPIN 25
 
 //fc = 1000hz
-class SecondOrderFilter{
-    private:
-        double y = 0; 
-        double y2k  = 0;
-        int64_t pasttime = esp_timer_get_time();
-    public:
-    double get (double X){
-        double dt = (esp_timer_get_time()-pasttime)/1e6;
-        double a = 1/(dt*dt*1e6) + 2/(dt*1e3) + 1;
-        double b = 2/(dt*dt*1e6) + 2/(dt*1e3);
-        double c = 1/(dt*dt*1e6);
-        double temp = y;
-        y = b/a*y + c/a*y2k + X/a; 
-        y2k = temp;
-        pasttime = esp_timer_get_time();
-        return y;
-    }
-    double get (){
-        return y;
-    }
-};
+
 
 SecondOrderFilter counts_per_second;
 int64_t counts = 0;
