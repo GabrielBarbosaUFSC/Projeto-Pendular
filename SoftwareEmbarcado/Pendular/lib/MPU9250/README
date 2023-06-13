@@ -1,0 +1,14 @@
+# Descrição dos Códigos
+
+Este repositório contém três códigos relacionados à leitura de dados do sensor MPU6050, que possui um acelerômetro e um giroscópio embutidos.
+
+## Código 1: MPU6050_LeituraSerial.ino
+
+Este código faz a leitura dos valores de aceleração nos eixos X, Y e Z, bem como dos valores de giroscópio nos mesmos eixos, a partir do sensor MPU6050. Ele exibe os valores lidos no monitor serial.
+
+Funcionamento:
+1. O código inicia a comunicação I2C e configura o sensor MPU6050.
+2. Em seguida, ele entra em um loop contínuo.
+3. No loop, ele realiza a leitura dos registradores do sensor para obter os valores de aceleração e giroscópio.
+4. Os valores lidos são exibidos no monitor serial.
+5. Após um pequeno atraso, o loop se repete para realizar novas leituras.
