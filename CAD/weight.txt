@@ -1,0 +1,21 @@
+Caixa Branca: Topo 2 (Parafusos laterais no topo) 1,3125g
+Caixa Branca: Baixo (Parafusos laterais em baixo) 1,1538g
+Caixa Branca: Topo (Parafusos fixação dos componentes) 1.1111g
+Caixa Branca: SEM 1g 
+Parafuso 8mm: 0.6923g 
+Porca M3: 0.6g 
+Placa ESP32: 19g
+Pilha: 45g 
+Roda: 23g
+Motor: 124g
+LM2596: 10g
+Conector de energia: 1g 
+Swicht: 3g 
+Botão: 5g
+Base lateral externa: 30g
+Base lateral interna: 37g
+Base COntrollers: 63g 
+Suporte Baterias: 29g
+Suporte Motor: 27g
+Suporte Baixo: 36g
+
