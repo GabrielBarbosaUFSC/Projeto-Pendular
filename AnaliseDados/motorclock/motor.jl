@@ -1,4 +1,4 @@
-using Plots; plotly()
+using Plots; plotly()   
 using Noise
 τr = 1e-1
 

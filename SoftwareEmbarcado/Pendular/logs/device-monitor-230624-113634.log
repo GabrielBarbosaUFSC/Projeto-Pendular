@@ -1,0 +1,621 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13192
+load:0x40080400,len:3028
+entry 0x400805e4
+started
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 12098ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 14599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 17099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 19599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 22099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 24599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 27099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 29599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 32099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 34599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 37099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 39599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 42099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 44599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 47099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 49599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 52099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 54599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 57099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 59599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 62099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 64599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 67099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 69599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 72099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 74599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 77099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 79599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 82099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 84599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 87099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 89599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 92099ms
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13192
+load:0x40080400,len:3028
+entry 0x400805e4
+started
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 12098ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 14599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 17099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 19599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 22099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 24599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 27099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 29599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 32099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 34599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 37099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 39599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 42099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 44599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 47099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 49599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 52099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 54599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 57099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 59599ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
+print mag values
+magX: 0.00
+maxY: 0.00
+magZ: 0.00
+horizontal direction: 0.00
+at 62099ms
+print accel values
+accelX: 0.00
+accelY: 0.00
+accelZ: 0.00
+accelSqrt: 0.00
