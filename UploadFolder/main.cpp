@@ -42,7 +42,6 @@ void rgb(String estado_led, float tempo){
 
 }
 
-
 void loop(){
     rgb("RGB",0.5);
 }
