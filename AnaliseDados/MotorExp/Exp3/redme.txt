@@ -1,0 +1,2 @@
+Objetivo: Verificar a influência do PWM no circuito
+Considerações: Vdc = 14.8V (tensão nominal), velocidade = 0

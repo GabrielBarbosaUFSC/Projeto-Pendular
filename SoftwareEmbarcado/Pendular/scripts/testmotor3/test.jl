@@ -13,9 +13,7 @@ function filter_iter(X, i, y, y2k)
     a = 1/(swc*dt[i]*dt[i]) + 1.414/(wc*dt[i]) + 1;
     b = (-1/swc)*(1/(dt[i]*dt[i]) + 1/(dt[i-1]*dt[i])) - 1.414/(wc*dt[i]);
     c = 1/(swc*dt[i]*dt[i-1]);
-
     Y = X/a - b/a*y - c/a*y2k;
-
     return Y;
 end
 

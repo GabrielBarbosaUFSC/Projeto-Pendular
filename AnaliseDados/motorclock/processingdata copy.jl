@@ -1,9 +1,13 @@
 filename = "motor.csv"
 filepath = joinpath(@__DIR__, filename)
 
+
+using PyCall
 using CSV
 using DataFrames
 using Plots; plotly()
+@pyimport nufft as nufft_fortran
+
 
 df = CSV.read(filepath, DataFrame)
 dtime = df[:,3] 

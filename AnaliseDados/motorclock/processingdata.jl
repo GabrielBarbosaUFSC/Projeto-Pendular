@@ -54,15 +54,8 @@ function calc_filter(wc, dt, x)
     return y, time_
 end
 
-y_filtered, time_ = calc_filter(1000, dtime_speed, speed_zeros)
+y_filtered, time_ = calc_filter(600, dtime_speed, speed_zeros)
 y_filtered
 time_
 
 plot(time_, [speed_zeros y_filtered])
-
-using FastTransforms
-
-n = length(speed_zeros)
-ω = collect(0:n-1)
-c = complex(rand(n));
-nufft1(c, time_)

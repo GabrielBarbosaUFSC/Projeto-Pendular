@@ -1,0 +1,1 @@
+Objetivo: obter a constante de velocidade do motor, constante de torque e constante de atrito
