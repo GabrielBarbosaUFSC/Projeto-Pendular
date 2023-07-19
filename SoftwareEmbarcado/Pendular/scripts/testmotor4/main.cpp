@@ -182,13 +182,25 @@ void loop3(void *pv){
     
 }
 
+void loop4(void *pv){
+    delay(200);
+    while (true){
+        Serial.print("\nOn");
+        motor.set_pwm(100);
+        delay(1000);
+        Serial.print("\nOff");
+        motor.set_pwm(0);
+        delay(3000);
+    }
+}
+
 void setup(){
     Serial.begin(115200);
     motor.begin(motor_isr);
     pinMode(36, INPUT);
     xTaskCreatePinnedToCore(loop1, "loop1", 10000, NULL, 1, NULL, 0);
     xTaskCreatePinnedToCore(loop3, "loop3", 10000, NULL, 2, NULL, 1);
-
+    xTaskCreatePinnedToCore(loop4, "loop4", 10000, NULL, 2, NULL, 0);
 }
 
 
@@ -199,7 +211,7 @@ void loop(){
     if (read != value_pwm) 
         Serial.printf("\n- %.0f -", read);
     value_pwm = read;
-    motor.set_pwm(read);
+    //motor.set_pwm(read);
     delay(25);
     
     // motor.set_pwm(100);
