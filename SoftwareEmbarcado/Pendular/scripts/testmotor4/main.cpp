@@ -130,7 +130,7 @@ class Motor{
             bool sent = PWM>0?false:true;
             if (invert) sent = !sent;
             digitalWrite(sen, sent);
-
+            Serial.println(2047-value);
             ledcWrite(channel, 2047 - value);
         }
         double get_speed(){
@@ -149,10 +149,21 @@ int PWM = 26;
 int ENCODER = 25; 
 Motor motor(SENTIDO, PWM, ENCODER, 0, 0);
 
+int index___ = 0;
+uint64_t pasttime = esp_timer_get_time();
+uint64_t dtimes[10000];
+bool record = false;
+
 double value_pwm;
 
 void motor_isr(){
     motor.isr();
+    if (!record) return;
+    uint64_t tosave = esp_timer_get_time() - pasttime;
+    if (tosave > 65535) tosave = 65535;
+    dtimes[index___] = tosave;
+    index___++;
+    pasttime = esp_timer_get_time();
 }
 
 void loop1(void *pv){
@@ -194,13 +205,32 @@ void loop4(void *pv){
     }
 }
 
+void printdtimes(){
+    Serial.printf("\n\n\ntick,time[us]");
+    for (int i = 0; i < (index___-1); i++)
+        Serial.printf("\n%d,%.0f", i, double(dtimes[i]));
+        delay(10);
+}
+
+
 void setup(){
     Serial.begin(115200);
     motor.begin(motor_isr);
-    pinMode(36, INPUT);
-    xTaskCreatePinnedToCore(loop1, "loop1", 10000, NULL, 1, NULL, 0);
-    xTaskCreatePinnedToCore(loop3, "loop3", 10000, NULL, 2, NULL, 1);
-    xTaskCreatePinnedToCore(loop4, "loop4", 10000, NULL, 2, NULL, 0);
+    motor.set_pwm(100);
+    Serial.println("TEST Motor");
+    delay(2000);
+    record = true;
+    delay(100);
+    motor.set_pwm(10);
+    delay(3000);
+    record = false;
+    printdtimes();
+    delay(1000000);
+
+    //pinMode(36, INPUT);
+    //xTaskCreatePinnedToCore(loop1, "loop1", 10000, NULL, 1, NULL, 0);
+    //xTaskCreatePinnedToCore(loop3, "loop3", 10000, NULL, 2, NULL, 1);
+    //xTaskCreatePinnedToCore(loop4, "loop4", 10000, NULL, 2, NULL, 0);
 }
 
 
