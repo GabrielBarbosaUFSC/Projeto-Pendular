@@ -36,7 +36,7 @@ I2 = @.I2 - sign(I2)*8.572e-3
 
 begin
     plot([V1 V2], [I1, I2], seriestype=:scatter)
-    title!("Motor travado: PWM x Current")    
+    title!("Motor travado: Veq x Current")    
 end
 
 
@@ -59,6 +59,8 @@ end
 pf1, p1  =fitting(I1, V1)
 pf2, p2 = fitting(I2, V2)
 
+re = (pf1[1] + pf2[1])/2
+v0 = (-pf1[2] + pf2[2])/2
 plot(p1)
 plot(p2)
 

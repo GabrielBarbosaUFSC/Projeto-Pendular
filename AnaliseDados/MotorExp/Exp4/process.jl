@@ -47,11 +47,11 @@ for i in eachindex(Veq)
     V_ = V*PWM[i]/100
     if PWM[i] > 0
         if V_ > 3.44
-            Veq[i] = V_ - 3.44
+            Veq[i] = V_ - 3.47
         end
     elseif PWM[i] < 0
         if V_ < -3.49
-            Veq[i] = V_ + 3.49
+            Veq[i] = V_ + 3.47
         end
     else
         Veq[i] = 0
@@ -98,7 +98,7 @@ end
 p0 = [0.1, 0]
 pf1 = curve_fit(ω_fit, I1, ω1, p0).param
 pf2 = curve_fit(ω_fit, I2, ω2, p0).param
-
+ktkv = (pf1[1]+pf2[1])/2
 
 Ifitted1 = range(0, 0.120, 300)
 ω_fitted1 = [ω_fit(i, pf1) for i in Ifitted1]
@@ -114,7 +114,7 @@ end
 
 # kt/kv = 100.77
 
-R = 6.04
+R = 6.05
 
 function calc_kω(Veq, ω, I)
     Veq_ω = @. Veq/ω
@@ -128,4 +128,9 @@ end
 kω1 = calc_kω(Veq1, ω1, I1)
 kω2 = calc_kω(Veq2, ω2, I2)
 
+kω = (kω1+kω2)/2
 #kω = 0.7826
+
+#from datasheet
+kt = (12*9.80665*1e-2)/1.8
+kv = kt/ktkv

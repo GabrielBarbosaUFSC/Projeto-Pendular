@@ -48,7 +48,7 @@ R = 1.008
 Vfit(If, p) = @. (p[1] + R)*If + p[2]
 p0 = [0.1, 0]
 pf = curve_fit(Vfit, I, Vdc, p0).param
-
+re = pf[1]+R
 Ifit = range(0, 2.5, 300)
 Vdcfit = [Vfit(i, pf) for i in Ifit]
 
@@ -62,5 +62,10 @@ end
 #--------------------------------------------------
 #Supondo τ = 400us
 τ_estimado = 400e-6
-L = τ_estimado*(R + 7.17)
+L = τ_estimado*(re)
+
+#from other experiments
+re_ = 6.05
+τ_calc = L/re_
+
 #L = 3.27mH
