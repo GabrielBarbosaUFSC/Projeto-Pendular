@@ -1,0 +1,2255 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13192
+load:0x40080400,len:3028
+entry 0x400805e4
+started
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 104.48
+magZ: 13.97
+horizontal direction: -0.66
+at 150ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 103.26
+magZ: 13.97
+horizontal direction: -0.67
+at 663ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 104.48
+magZ: 15.13
+horizontal direction: -1.33
+at 1176ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 104.48
+magZ: 15.13
+horizontal direction: 0.66
+at 1689ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 105.69
+magZ: 13.97
+horizontal direction: -0.66
+at 2202ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 104.48
+magZ: 13.97
+horizontal direction: -0.66
+at 2715ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 104.48
+magZ: 13.97
+horizontal direction: -1.33
+at 3228ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 0.00
+maxY: 106.91
+magZ: 15.13
+horizontal direction: 0.00
+at 3741ms
+print accel values
+accelX: 0.07
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 105.69
+magZ: 13.97
+horizontal direction: -0.66
+at 4254ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 104.48
+magZ: 13.97
+horizontal direction: 0.00
+at 4767ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -3.63
+maxY: 105.69
+magZ: 12.80
+horizontal direction: -1.97
+at 5280ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 103.26
+magZ: 17.46
+horizontal direction: -1.34
+at 5793ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -3.63
+maxY: 105.69
+magZ: 13.97
+horizontal direction: -1.97
+at 6306ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 103.26
+magZ: 13.97
+horizontal direction: 0.67
+at 6819ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 0.00
+maxY: 105.69
+magZ: 16.30
+horizontal direction: 0.00
+at 7332ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 103.26
+magZ: 13.97
+horizontal direction: -0.67
+at 7845ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 103.26
+magZ: 15.13
+horizontal direction: -0.67
+at 8358ms
+print accel values
+accelX: 0.07
+accelY: 0.02
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 105.69
+magZ: 15.13
+horizontal direction: -0.66
+at 8871ms
+print accel values
+accelX: 0.03
+accelY: 0.03
+accelZ: -1.02
+accelSqrt: 1.02
+print mag values
+magX: -1.21
+maxY: 105.69
+magZ: 15.13
+horizontal direction: -0.66
+at 9384ms
+print accel values
+accelX: -0.84
+accelY: -0.02
+accelZ: -0.57
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 105.69
+magZ: 37.25
+horizontal direction: 0.66
+at 9897ms
+print accel values
+accelX: -0.98
+accelY: 0.00
+accelZ: -0.17
+accelSqrt: 0.99
+print mag values
+magX: 4.84
+maxY: 100.83
+magZ: 46.56
+horizontal direction: 2.75
+at 10410ms
+print accel values
+accelX: -1.00
+accelY: 0.00
+accelZ: -0.12
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 47.73
+horizontal direction: 2.06
+at 10923ms
+print accel values
+accelX: -1.00
+accelY: 0.00
+accelZ: -0.12
+accelSqrt: 1.00
+print mag values
+magX: 4.84
+maxY: 103.26
+magZ: 46.56
+horizontal direction: 2.69
+at 11436ms
+print accel values
+accelX: -1.00
+accelY: 0.00
+accelZ: -0.10
+accelSqrt: 1.00
+print mag values
+magX: 4.84
+maxY: 98.40
+magZ: 47.73
+horizontal direction: 2.82
+at 11949ms
+print accel values
+accelX: -1.00
+accelY: 0.00
+accelZ: -0.10
+accelSqrt: 1.00
+print mag values
+magX: 4.84
+maxY: 103.26
+magZ: 47.73
+horizontal direction: 2.69
+at 12462ms
+print accel values
+accelX: -1.00
+accelY: -0.00
+accelZ: -0.10
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 48.89
+horizontal direction: 2.06
+at 12975ms
+print accel values
+accelX: -0.88
+accelY: 0.02
+accelZ: -0.45
+accelSqrt: 0.99
+print mag values
+magX: 4.84
+maxY: 104.48
+magZ: 39.58
+horizontal direction: 2.65
+at 13488ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.02
+accelSqrt: 1.02
+print mag values
+magX: 0.00
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.00
+at 14001ms
+print accel values
+accelX: 0.61
+accelY: 0.05
+accelZ: -0.79
+accelSqrt: 1.00
+print mag values
+magX: 2.42
+maxY: 91.11
+magZ: 9.31
+horizontal direction: 1.52
+at 14514ms
+print accel values
+accelX: 1.03
+accelY: 0.02
+accelZ: -0.03
+accelSqrt: 1.03
+print mag values
+magX: -1.21
+maxY: 72.89
+magZ: 17.46
+horizontal direction: -0.95
+at 15027ms
+print accel values
+accelX: 1.00
+accelY: 0.01
+accelZ: 0.08
+accelSqrt: 1.00
+print mag values
+magX: -2.42
+maxY: 70.46
+magZ: 18.62
+horizontal direction: -1.97
+at 15540ms
+print accel values
+accelX: 0.99
+accelY: 0.02
+accelZ: 0.08
+accelSqrt: 0.99
+print mag values
+magX: -1.21
+maxY: 69.25
+magZ: 20.95
+horizontal direction: -1.00
+at 16053ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.11
+accelSqrt: 1.00
+print mag values
+magX: -4.84
+maxY: 69.25
+magZ: 22.12
+horizontal direction: -4.00
+at 16566ms
+print accel values
+accelX: 0.99
+accelY: 0.02
+accelZ: 0.15
+accelSqrt: 1.00
+print mag values
+magX: 0.00
+maxY: 65.60
+magZ: 20.95
+horizontal direction: 0.00
+at 17079ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.19
+accelSqrt: 1.01
+print mag values
+magX: -3.63
+maxY: 68.03
+magZ: 23.28
+horizontal direction: -3.06
+at 17592ms
+print accel values
+accelX: 0.99
+accelY: 0.02
+accelZ: 0.21
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 70.46
+magZ: 19.79
+horizontal direction: -0.98
+at 18105ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.22
+accelSqrt: 1.01
+print mag values
+magX: -3.63
+maxY: 69.25
+magZ: 24.45
+horizontal direction: -3.00
+at 18618ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.22
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 70.46
+magZ: 22.12
+horizontal direction: -1.97
+at 19131ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.18
+accelSqrt: 1.00
+print mag values
+magX: -3.63
+maxY: 69.25
+magZ: 23.28
+horizontal direction: -3.00
+at 19644ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.19
+accelSqrt: 1.00
+print mag values
+magX: -2.42
+maxY: 69.25
+magZ: 22.12
+horizontal direction: -2.00
+at 20157ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.19
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 69.25
+magZ: 22.12
+horizontal direction: -1.00
+at 20670ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.20
+accelSqrt: 1.00
+print mag values
+magX: -3.63
+maxY: 68.03
+magZ: 19.79
+horizontal direction: -3.06
+at 21183ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.20
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 70.46
+magZ: 19.79
+horizontal direction: -0.98
+at 21696ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.22
+accelSqrt: 1.00
+print mag values
+magX: 0.00
+maxY: 64.39
+magZ: 20.95
+horizontal direction: 0.00
+at 22209ms
+print accel values
+accelX: 0.97
+accelY: 0.01
+accelZ: 0.26
+accelSqrt: 1.00
+print mag values
+magX: -2.42
+maxY: 66.82
+magZ: 23.28
+horizontal direction: -2.08
+at 22722ms
+print accel values
+accelX: 0.97
+accelY: 0.01
+accelZ: 0.27
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 70.46
+magZ: 24.45
+horizontal direction: -0.98
+at 23235ms
+print accel values
+accelX: 0.97
+accelY: 0.01
+accelZ: 0.26
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 66.82
+magZ: 23.28
+horizontal direction: -1.04
+at 23748ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.25
+accelSqrt: 1.01
+print mag values
+magX: -3.63
+maxY: 69.25
+magZ: 24.45
+horizontal direction: -3.00
+at 24261ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.24
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 68.03
+magZ: 23.28
+horizontal direction: -2.04
+at 24774ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.15
+accelSqrt: 1.00
+print mag values
+magX: -2.42
+maxY: 68.03
+magZ: 20.95
+horizontal direction: -2.04
+at 25287ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.19
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 69.25
+magZ: 22.12
+horizontal direction: -2.00
+at 25800ms
+print accel values
+accelX: 1.05
+accelY: 0.03
+accelZ: 0.05
+accelSqrt: 1.05
+print mag values
+magX: -3.63
+maxY: 69.25
+magZ: 22.12
+horizontal direction: -3.00
+at 26313ms
+print accel values
+accelX: 1.00
+accelY: 0.01
+accelZ: 0.12
+accelSqrt: 1.00
+print mag values
+magX: -2.42
+maxY: 69.25
+magZ: 19.79
+horizontal direction: -2.00
+at 26826ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.17
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 69.25
+magZ: 23.28
+horizontal direction: -1.00
+at 27339ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.17
+accelSqrt: 1.00
+print mag values
+magX: -2.42
+maxY: 66.82
+magZ: 23.28
+horizontal direction: -2.08
+at 27852ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.16
+accelSqrt: 1.01
+print mag values
+magX: -1.21
+maxY: 69.25
+magZ: 24.45
+horizontal direction: -1.00
+at 28365ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.16
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 68.03
+magZ: 20.95
+horizontal direction: -1.02
+at 28878ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.16
+accelSqrt: 1.01
+print mag values
+magX: -2.42
+maxY: 69.25
+magZ: 22.12
+horizontal direction: -2.00
+at 29391ms
+print accel values
+accelX: 0.98
+accelY: 0.01
+accelZ: 0.19
+accelSqrt: 1.00
+print mag values
+magX: -1.21
+maxY: 68.03
+magZ: 22.12
+horizontal direction: -1.02
+at 29904ms
+print accel values
+accelX: 0.37
+accelY: 0.02
+accelZ: -0.83
+accelSqrt: 0.91
+print mag values
+magX: 1.21
+maxY: 86.25
+magZ: 11.64
+horizontal direction: 0.80
+at 30417ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 98.40
+magZ: 16.30
+horizontal direction: 2.82
+at 30930ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 97.19
+magZ: 13.97
+horizontal direction: 2.14
+at 31443ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 6.05
+maxY: 97.19
+magZ: 15.13
+horizontal direction: 3.56
+at 31956ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 97.19
+magZ: 16.30
+horizontal direction: 1.43
+at 32469ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 97.19
+magZ: 16.30
+horizontal direction: 2.85
+at 32982ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 3.63
+maxY: 95.97
+magZ: 13.97
+horizontal direction: 2.17
+at 33495ms
+print accel values
+accelX: -0.05
+accelY: 0.08
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 94.76
+magZ: 17.46
+horizontal direction: 2.93
+at 34008ms
+print accel values
+accelX: 0.07
+accelY: 0.02
+accelZ: -1.02
+accelSqrt: 1.02
+print mag values
+magX: 4.84
+maxY: 98.40
+magZ: 16.30
+horizontal direction: 2.82
+at 34521ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 2.09
+at 35034ms
+print accel values
+accelX: -0.10
+accelY: 0.07
+accelZ: -1.03
+accelSqrt: 1.03
+print mag values
+magX: 1.21
+maxY: 97.19
+magZ: 15.13
+horizontal direction: 0.71
+at 35547ms
+print accel values
+accelX: 0.82
+accelY: 0.01
+accelZ: -0.55
+accelSqrt: 0.98
+print mag values
+magX: 2.42
+maxY: 86.25
+magZ: 13.97
+horizontal direction: 1.61
+at 36060ms
+print accel values
+accelX: 1.00
+accelY: 0.01
+accelZ: -0.03
+accelSqrt: 1.00
+print mag values
+magX: 1.21
+maxY: 71.68
+magZ: 20.95
+horizontal direction: 0.97
+at 36573ms
+print accel values
+accelX: 1.00
+accelY: 0.01
+accelZ: -0.01
+accelSqrt: 1.00
+print mag values
+magX: 0.00
+maxY: 72.89
+magZ: 19.79
+horizontal direction: 0.00
+at 37086ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.04
+accelSqrt: 0.99
+print mag values
+magX: 1.21
+maxY: 70.46
+magZ: 22.12
+horizontal direction: 0.98
+at 37599ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.13
+accelSqrt: 1.00
+print mag values
+magX: 0.00
+maxY: 71.68
+magZ: 24.45
+horizontal direction: 0.00
+at 38112ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.10
+accelSqrt: 1.00
+print mag values
+magX: 1.21
+maxY: 70.46
+magZ: 24.45
+horizontal direction: 0.98
+at 38625ms
+print accel values
+accelX: 0.99
+accelY: 0.01
+accelZ: 0.11
+accelSqrt: 1.00
+print mag values
+magX: 1.21
+maxY: 70.46
+magZ: 24.45
+horizontal direction: 0.98
+at 39138ms
+print accel values
+accelX: 0.74
+accelY: -0.04
+accelZ: -0.63
+accelSqrt: 0.97
+print mag values
+magX: 2.42
+maxY: 83.82
+magZ: 10.48
+horizontal direction: 1.65
+at 39651ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 95.97
+magZ: 17.46
+horizontal direction: 2.17
+at 40164ms
+print accel values
+accelX: 0.17
+accelY: -0.08
+accelZ: -1.24
+accelSqrt: 1.26
+print mag values
+magX: 2.42
+maxY: 97.19
+magZ: 17.46
+horizontal direction: 1.43
+at 40677ms
+print accel values
+accelX: 0.05
+accelY: -0.00
+accelZ: -1.04
+accelSqrt: 1.04
+print mag values
+magX: 2.42
+maxY: 104.48
+magZ: 13.97
+horizontal direction: 1.33
+at 41190ms
+print accel values
+accelX: -0.07
+accelY: -0.72
+accelZ: -0.53
+accelSqrt: 0.90
+print mag values
+magX: 6.05
+maxY: 106.91
+magZ: 38.41
+horizontal direction: 3.24
+at 41703ms
+print accel values
+accelX: -0.08
+accelY: -1.00
+accelZ: -0.10
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 99.62
+magZ: 54.71
+horizontal direction: 2.78
+at 42216ms
+print accel values
+accelX: -0.09
+accelY: -0.98
+accelZ: -0.09
+accelSqrt: 0.99
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 50.05
+horizontal direction: 0.70
+at 42729ms
+print accel values
+accelX: 0.03
+accelY: -0.92
+accelZ: -0.08
+accelSqrt: 0.93
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 53.55
+horizontal direction: 2.04
+at 43242ms
+print accel values
+accelX: -0.03
+accelY: -0.72
+accelZ: -0.79
+accelSqrt: 1.07
+print mag values
+magX: 8.48
+maxY: 100.83
+magZ: 39.58
+horizontal direction: 4.81
+at 43755ms
+print accel values
+accelX: -0.01
+accelY: -0.18
+accelZ: -0.96
+accelSqrt: 0.98
+print mag values
+magX: 6.05
+maxY: 100.83
+magZ: 20.95
+horizontal direction: 3.44
+at 44268ms
+print accel values
+accelX: 0.31
+accelY: -0.03
+accelZ: -0.92
+accelSqrt: 0.97
+print mag values
+magX: 3.63
+maxY: 98.40
+magZ: 16.30
+horizontal direction: 2.11
+at 44781ms
+print accel values
+accelX: 0.76
+accelY: -0.03
+accelZ: -0.65
+accelSqrt: 1.00
+print mag values
+magX: 2.42
+maxY: 86.25
+magZ: 13.97
+horizontal direction: 1.61
+at 45294ms
+print accel values
+accelX: 0.99
+accelY: -0.09
+accelZ: -0.17
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 78.96
+magZ: 15.13
+horizontal direction: 0.88
+at 45807ms
+print accel values
+accelX: 0.98
+accelY: -0.04
+accelZ: -0.16
+accelSqrt: 0.99
+print mag values
+magX: 1.21
+maxY: 75.32
+magZ: 20.95
+horizontal direction: 0.92
+at 46320ms
+print accel values
+accelX: 0.60
+accelY: -0.10
+accelZ: -0.91
+accelSqrt: 1.09
+print mag values
+magX: 4.84
+maxY: 88.68
+magZ: 12.80
+horizontal direction: 3.13
+at 46833ms
+print accel values
+accelX: 0.43
+accelY: -0.17
+accelZ: -0.81
+accelSqrt: 0.93
+print mag values
+magX: 7.27
+maxY: 94.76
+magZ: 17.46
+horizontal direction: 4.38
+at 47346ms
+print accel values
+accelX: -0.05
+accelY: 0.00
+accelZ: -0.84
+accelSqrt: 0.84
+print mag values
+magX: 3.63
+maxY: 97.19
+magZ: 16.30
+horizontal direction: 2.14
+at 47859ms
+print accel values
+accelX: 0.03
+accelY: 0.06
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 7.27
+maxY: 94.76
+magZ: 16.30
+horizontal direction: 4.38
+at 48372ms
+print accel values
+accelX: 0.08
+accelY: 0.01
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 6.05
+maxY: 89.90
+magZ: 18.62
+horizontal direction: 3.85
+at 48885ms
+print accel values
+accelX: 0.04
+accelY: 0.05
+accelZ: -1.02
+accelSqrt: 1.02
+print mag values
+magX: -12.11
+maxY: 110.55
+magZ: 15.13
+horizontal direction: -6.25
+at 49398ms
+print accel values
+accelX: 0.09
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: -14.53
+maxY: 109.34
+magZ: 12.80
+horizontal direction: -7.57
+at 49911ms
+print accel values
+accelX: 0.08
+accelY: 0.01
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: -14.53
+maxY: 109.34
+magZ: 13.97
+horizontal direction: -7.57
+at 50424ms
+print accel values
+accelX: 0.04
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: -14.53
+maxY: 110.55
+magZ: 15.13
+horizontal direction: -7.49
+at 50937ms
+print accel values
+accelX: 0.09
+accelY: 0.02
+accelZ: -1.03
+accelSqrt: 1.04
+print mag values
+magX: -1.21
+maxY: 104.48
+magZ: 13.97
+horizontal direction: -0.66
+at 51450ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 94.76
+magZ: 17.46
+horizontal direction: 2.93
+at 51963ms
+print accel values
+accelX: 0.21
+accelY: 0.01
+accelZ: -0.99
+accelSqrt: 1.02
+print mag values
+magX: 4.84
+maxY: 97.19
+magZ: 16.30
+horizontal direction: 2.85
+at 52476ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 2.06
+at 52989ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 2.06
+at 53502ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 0.00
+at 54015ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 0.70
+at 54528ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 0.70
+at 55041ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 0.70
+at 55554ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 17.46
+horizontal direction: 2.09
+at 56067ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 15.13
+horizontal direction: 0.70
+at 56580ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 0.70
+at 57093ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 2.06
+at 57606ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 0.69
+at 58119ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 1.38
+at 58632ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 0.70
+at 59145ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 2.09
+at 59658ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 2.09
+at 60171ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 1.38
+at 60684ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 12.80
+horizontal direction: 1.38
+at 61197ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 0.69
+at 61710ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.00
+at 62223ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 15.13
+horizontal direction: 0.70
+at 62736ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 16.30
+horizontal direction: 1.36
+at 63249ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.02
+accelSqrt: 1.02
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 2.04
+at 63762ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 15.13
+horizontal direction: 2.09
+at 64275ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 99.62
+magZ: 17.46
+horizontal direction: 2.78
+at 64788ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 99.62
+magZ: 13.97
+horizontal direction: 0.00
+at 65301ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 2.06
+at 65814ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 1.39
+at 66327ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.69
+at 66840ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 0.69
+at 67353ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 12.80
+horizontal direction: 1.36
+at 67866ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: 3.63
+maxY: 97.19
+magZ: 17.46
+horizontal direction: 2.14
+at 68379ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 1.38
+at 68892ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 12.80
+horizontal direction: 2.06
+at 69405ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 1.38
+at 69918ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 1.36
+at 70431ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 12.80
+horizontal direction: 1.38
+at 70944ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.69
+at 71457ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 98.40
+magZ: 13.97
+horizontal direction: 1.41
+at 71970ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 99.62
+magZ: 15.13
+horizontal direction: 0.00
+at 72483ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: 0.00
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 0.00
+at 72996ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: 3.63
+maxY: 98.40
+magZ: 15.13
+horizontal direction: 2.11
+at 73509ms
+print accel values
+accelX: 0.24
+accelY: -0.05
+accelZ: -1.00
+accelSqrt: 1.03
+print mag values
+magX: 1.21
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 0.68
+at 74022ms
+print accel values
+accelX: 0.03
+accelY: 0.01
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 94.76
+magZ: 15.13
+horizontal direction: 2.93
+at 74535ms
+print accel values
+accelX: -0.58
+accelY: 0.21
+accelZ: -1.07
+accelSqrt: 1.24
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 0.69
+at 75048ms
+print accel values
+accelX: 0.63
+accelY: -0.02
+accelZ: -0.96
+accelSqrt: 1.16
+print mag values
+magX: 0.00
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 0.00
+at 75561ms
+print accel values
+accelX: 0.85
+accelY: -0.15
+accelZ: -0.96
+accelSqrt: 1.29
+print mag values
+magX: 2.42
+maxY: 103.26
+magZ: 15.13
+horizontal direction: 1.34
+at 76074ms
+print accel values
+accelX: 0.48
+accelY: 0.23
+accelZ: -0.95
+accelSqrt: 1.09
+print mag values
+magX: 0.00
+maxY: 103.26
+magZ: 16.30
+horizontal direction: 0.00
+at 76587ms
+print accel values
+accelX: 0.85
+accelY: -0.07
+accelZ: -0.97
+accelSqrt: 1.29
+print mag values
+magX: -1.21
+maxY: 100.83
+magZ: 15.13
+horizontal direction: -0.69
+at 77100ms
+print accel values
+accelX: 0.34
+accelY: -0.03
+accelZ: -0.99
+accelSqrt: 1.05
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 1.38
+at 77613ms
+print accel values
+accelX: -0.57
+accelY: 0.03
+accelZ: -1.05
+accelSqrt: 1.20
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.69
+at 78126ms
+print accel values
+accelX: 0.42
+accelY: -0.14
+accelZ: -1.00
+accelSqrt: 1.10
+print mag values
+magX: -3.63
+maxY: 104.48
+magZ: 17.46
+horizontal direction: -1.99
+at 78639ms
+print accel values
+accelX: 0.81
+accelY: -0.03
+accelZ: -0.96
+accelSqrt: 1.25
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 17.46
+horizontal direction: 0.70
+at 79152ms
+print accel values
+accelX: -0.76
+accelY: -0.02
+accelZ: -1.05
+accelSqrt: 1.30
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 17.46
+horizontal direction: 2.04
+at 79665ms
+print accel values
+accelX: -0.56
+accelY: -0.12
+accelZ: -1.04
+accelSqrt: 1.18
+print mag values
+magX: -1.21
+maxY: 104.48
+magZ: 17.46
+horizontal direction: -0.66
+at 80178ms
+print accel values
+accelX: 0.52
+accelY: -0.04
+accelZ: -0.98
+accelSqrt: 1.11
+print mag values
+magX: -1.21
+maxY: 102.05
+magZ: 15.13
+horizontal direction: -0.68
+at 80691ms
+print accel values
+accelX: 1.20
+accelY: -0.19
+accelZ: -0.92
+accelSqrt: 1.52
+print mag values
+magX: 3.63
+maxY: 94.76
+magZ: 17.46
+horizontal direction: 2.20
+at 81204ms
+print accel values
+accelX: 0.77
+accelY: -0.12
+accelZ: -0.93
+accelSqrt: 1.22
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 2.06
+at 81717ms
+print accel values
+accelX: 0.99
+accelY: -0.15
+accelZ: -0.93
+accelSqrt: 1.37
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 2.09
+at 82230ms
+print accel values
+accelX: 0.24
+accelY: 0.18
+accelZ: -0.99
+accelSqrt: 1.03
+print mag values
+magX: 1.21
+maxY: 102.05
+magZ: 16.30
+horizontal direction: 0.68
+at 82743ms
+print accel values
+accelX: 0.61
+accelY: -0.01
+accelZ: -0.96
+accelSqrt: 1.14
+print mag values
+magX: 1.21
+maxY: 102.05
+magZ: 16.30
+horizontal direction: 0.68
+at 83256ms
+print accel values
+accelX: 0.57
+accelY: 0.03
+accelZ: -0.97
+accelSqrt: 1.13
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 0.70
+at 83769ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 97.19
+magZ: 16.30
+horizontal direction: 0.71
+at 84282ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 0.69
+at 84795ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 13.97
+horizontal direction: 2.04
+at 85308ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 17.46
+horizontal direction: 1.36
+at 85821ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 103.26
+magZ: 15.13
+horizontal direction: 1.34
+at 86334ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.00
+at 86847ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 17.46
+horizontal direction: 2.04
+at 87360ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 1.38
+at 87873ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 16.30
+horizontal direction: 2.04
+at 88386ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 16.30
+horizontal direction: 2.04
+at 88899ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 99.62
+magZ: 17.46
+horizontal direction: 1.39
+at 89412ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: 3.63
+maxY: 99.62
+magZ: 15.13
+horizontal direction: 2.09
+at 89925ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.02
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 0.69
+at 90438ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.00
+print mag values
+magX: 1.21
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 0.69
+at 90951ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 13.97
+horizontal direction: 2.04
+at 91464ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 2.06
+at 91977ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 1.38
+at 92490ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 0.70
+at 93003ms
+print accel values
+accelX: 0.07
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 2.06
+at 93516ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 102.05
+magZ: 13.97
+horizontal direction: 0.68
+at 94029ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 13.97
+horizontal direction: 2.04
+at 94542ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 2.04
+at 95055ms
+print accel values
+accelX: 0.07
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 4.84
+maxY: 100.83
+magZ: 15.13
+horizontal direction: 2.75
+at 95568ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 103.26
+magZ: 16.30
+horizontal direction: 1.34
+at 96081ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 1.36
+at 96594ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 97.19
+magZ: 15.13
+horizontal direction: 0.00
+at 97107ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 103.26
+magZ: 13.97
+horizontal direction: 0.67
+at 97620ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 1.38
+at 98133ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 104.48
+magZ: 13.97
+horizontal direction: 1.33
+at 98646ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 3.63
+maxY: 100.83
+magZ: 16.30
+horizontal direction: 2.06
+at 99159ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 1.21
+maxY: 102.05
+magZ: 13.97
+horizontal direction: 0.68
+at 99672ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 1.39
+at 100185ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 12.80
+horizontal direction: 1.36
+at 100698ms
+print accel values
+accelX: 0.06
+accelY: 0.02
+accelZ: -1.02
+accelSqrt: 1.02
+print mag values
+magX: 1.21
+maxY: 103.26
+magZ: 17.46
+horizontal direction: 0.67
+at 101211ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 16.30
+horizontal direction: 1.36
+at 101724ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 99.62
+magZ: 16.30
+horizontal direction: 0.00
+at 102237ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 100.83
+magZ: 13.97
+horizontal direction: 1.38
+at 102750ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 0.00
+maxY: 103.26
+magZ: 13.97
+horizontal direction: 0.00
+at 103263ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.01
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 1.36
+at 103776ms
+print accel values
+accelX: 0.06
+accelY: 0.03
+accelZ: -1.00
+accelSqrt: 1.01
+print mag values
+magX: 2.42
+maxY: 102.05
+magZ: 15.13
+horizontal direction: 1.36
+at 104289ms
