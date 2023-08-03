@@ -18,4 +18,3 @@ Base COntrollers: 63g
 Suporte Baterias: 29g
 Suporte Motor: 27g
 Suporte Baixo: 36g
-
