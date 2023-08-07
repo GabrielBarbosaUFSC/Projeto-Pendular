@@ -91,18 +91,19 @@ function get_matrix_θΦ(N1, N2, Nu, λθ, λΦ)
 end
 
 function get_matrix_θdΦ(Nθ, NdΦ, N2, Nu, λθ, λdΦ)
-    #N1, N2, Nu, λθ, λdΦ = 1, 4, 2, 0.3, 0.4
+    #Nθ, NdΦ, N2, Nu, λθ, λdΦ = 1, 1, 4, 2, 0.3, 0.4
     λΔu = 1 - λθ - λdΦ
-    θ_bound = pi/9  #20°
-    dΦ_bound = 5    #5 rad/s 
-    Δu_bound = 3    #3V
+    θ_bound = pi/36  #5°
+    dΦ_bound = 20    #5 rad/s 
+    Δu_bound = 4    #3V
 
     Gainθ = λθ/(N2-Nθ+1)/θ_bound
     GaindΦ = λdΦ/(N2-NdΦ+1)/dΦ_bound
     GainΔu = λΔu/Nu/Δu_bound
 
-    Numθ = -0.005286550699417969z^-1 + 0.004616222333472475z^-2 + 0.0006703283659455013z^-3
-    Denθ = 1.0 - 2.022214670021557z^-1 + 1.005503039109366z^-2 - 0.0008094941026986402z^-3
+    
+    Numθ = (-2.5518240522015003e-5z^3 - 3.9977949724726136e-5z^2 + 5.552779253929561e-5z + 9.968397707445544e-6)*z^-4
+    Denθ = (1.0z^4 - 2.8144178969338807z^3 + 2.7809051333513173z^2 - 1.1186891788559257z + 0.1521872086753235)*z^-4
     MG_Yθ, firstyθ, lastyθ, MG_Δuθ, firstuθ, lastuθ = get_matrixGain(Numθ, Denθ, N2)
     firstyθ
     lastyθ
@@ -110,11 +111,12 @@ function get_matrix_θdΦ(Nθ, NdΦ, N2, Nu, λθ, λdΦ)
     lastuθ
 
     MG_Y_freeθ= MG_Yθ[Nθ:N2,:]
-    MGΔu_freeθ = MG_Δuθ[Nθ:N2,1:2]
-    MGΔu_forcedθ = MG_Δuθ[Nθ:N2,3:3+Nu-1]
+    MGΔu_freeθ = MG_Δuθ[Nθ:N2,1:3]
+    MGΔu_forcedθ = MG_Δuθ[Nθ:N2,4:4+Nu-1]
+
     
-    NumdΦ = (0.015816538553838022z^4 - 0.045807774158408865z^3 + 0.04173838419812215z^2 - 0.00973595822873725z - 0.002011190364814053)z^-5
-    DendΦ = (1.0z^5 - 3.0222146700215564z^4 + 3.0277177091309224z^3 - 1.0063125332120644z^2 + 0.00080949410269864z)z^-5
+    NumdΦ = (0.19591417797414887z^3 - 0.2872669541548613z^2 - 0.013237554224906335z + 0.10457282433264564)*z^-4
+    DendΦ = (1.0z^4 - 2.8144178969338807z^3 + 2.7809051333513173z^2 - 1.1186891788559257z + 0.1521872086753235)*z^-4
     MG_YdΦ, firstydΦ, lastydΦ, MG_ΔudΦ, firstudΦ, lastudΦ = get_matrixGain(NumdΦ, DendΦ, N2)
     firstydΦ
     lastydΦ
@@ -125,8 +127,8 @@ function get_matrix_θdΦ(Nθ, NdΦ, N2, Nu, λθ, λdΦ)
     MG_ΔudΦ
 
     MG_Y_freedΦ= MG_YdΦ[NdΦ:N2,:]
-    MGΔu_freedΦ = MG_ΔudΦ[NdΦ:N2, 1:4]
-    MGΔu_forceddΦ = MG_ΔudΦ[NdΦ:N2, 5:5+Nu-1]
+    MGΔu_freedΦ = MG_ΔudΦ[NdΦ:N2, 1:3]
+    MGΔu_forceddΦ = MG_ΔudΦ[NdΦ:N2, 4:4+Nu-1]
 
     K1θ, K1dΦ = get_K1(MGΔu_forcedθ, Gainθ, MGΔu_forceddΦ, GaindΦ, GainΔu)
     return K1θ, MG_Y_freeθ, MGΔu_freeθ, K1dΦ, MG_Y_freedΦ, MGΔu_freedΦ
@@ -154,7 +156,7 @@ begin
     b1 = mb*rw^2 + mw*rw^2 + Iw
 end
 
-ts = 2.0e-4
+ts = 1.0e-5
 function iter(x, Vn)    
     #println(Vn)
     dθ = x[1]

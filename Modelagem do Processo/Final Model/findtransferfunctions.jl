@@ -19,8 +19,6 @@ using Symbolics
 
 @variables s
 
-using ControlSystems
-
 D1 = (2*kt/re)*(1/(τm*s+1))
 D2 = +(2*kt*kω/re)*(s/(τm*s+1))
 D3 = -(2*kt*kω/re)*(s/(τm*s+1))

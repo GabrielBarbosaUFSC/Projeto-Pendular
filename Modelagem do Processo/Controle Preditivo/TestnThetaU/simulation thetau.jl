@@ -13,18 +13,17 @@ end
 function simulation()
     len = Int(trunc(time/ts))
 
-    K1θ, MG_Y_freeθ, MGΔu_freeθ, K1dΦ, MG_Y_freedΦ, MGΔu_freedΦ = get_matrix_θdΦ(Nθ, NdΦ, N2, Nu, λθ, λdΦ)
+    K1θ, MG_Y_freeθ, MGΔu_freeθ, K1u = get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
 
     t = zeros(len)
     x = zeros(len, 5)
     Vn = zeros(len)
     vecfθ = zeros(len)
-    vecfdΦ = zeros(len)
 
     #noise = add_gauss(zeros(len), 0.001)
 
     dθ0 = 0
-    θ0 = pi/9
+    θ0 = pi/18
     dΦ0 = 0
     Φ0 = 0
     I0 = 0
@@ -34,7 +33,7 @@ function simulation()
     pastΔu = zeros(3, 1)
 
     θ = θ0*ones(5, 1)
-    dΦ = dΦ0*ones(5, 1)
+    #dΦ = dΦ0*ones(5, 1)
     pastx = x[1,:]
     Vn1 = 0.0
     
@@ -43,22 +42,19 @@ function simulation()
     end
 
     fθ = 0
-    fdΦ = 0
     for i in range(6, len)
         if i%100 == 0
             θ = shift_values(θ, x[i-1,2])
-            dΦ = shift_values(dΦ, x[i-1,3])
+            #dΦ = shift_values(dΦ, x[i-1,3])
 
             fθ = MG_Y_freeθ*θ + MGΔu_freeθ*pastΔu
 
-            fdΦ = MG_Y_freedΦ*dΦ + MGΔu_freedΦ*pastΔu 
+            #fdΦ = MG_Y_freedΦ*dΦ + MGΔu_freedΦ*pastΔu 
             
-            Δu = sum(@. K1θ*fθ) + sum(@. K1dΦ*fdΦ) 
+            Δu = sum(@. K1θ*fθ) + K1u[1]*(-Vn1) # sum(@. K1dΦ*fdΦ) 
             println(Δu)
 
-            pastΔu[3] = pastΔu[2]
-            pastΔu[2] = pastΔu[1]
-            pastΔu[1] = Δu
+            pastΔu = shift_values(pastΔu, Δu)
 
             Vn1 = Vn1 + Δu
 
@@ -69,8 +65,8 @@ function simulation()
             end
 
         end
-        vecfdΦ[i] = fdΦ[end]
-        vecfθ[i] = fθ[end]
+        #vecfdΦ[i] = fdΦ[end]
+        vecfθ[i] = fθ[1]
         Vn[i] = Vn1
         t[i] = (i-1)*ts
         x[i,:] = iter(pastx, Vn[i])
@@ -78,28 +74,28 @@ function simulation()
         x[i, 2] = x[i,2] #+ noise[i] 
     end  
 
-    plotθ = plot(t, 180/pi*(x[:,2]), label="Θ")
+    plotθ = plot(t, [180/pi*(x[:,2]) 180/pi*vecfθ], label="Θ")
     plotu = plot(t, x[:,5], label="tm")
     #plotdθdΦ = plot(t, [vecfdΦ x[:,3]], label=["fdΦ" "dΦ"])   
     plotdθdΦ = plot(t, [x[:,1], x[:,3]], label=["dΘ" "dΦ"])   
     plotVn = plot(t, Vn, label = "Vn")
     plotfθ = plot(t, 180/pi*vecfθ, label = "fθ")
-    plotfdΦ = plot(t, vecfdΦ, label = "fdΦ")
+    #plotfdΦ = plot(t, vecfdΦ, label = "fdΦ")
 
-    plot(plotθ, plotVn, plotdθdΦ, plotu, plotfθ, plotfdΦ, layout = (6, 1), size = (1080, 720))
+    plot(plotθ, plotVn, plotdθdΦ, plotu, plotfθ, layout = (5, 1), size = (1080, 720))
     
 end
 
 #Ganhos Relativos: λθ + λΦ + λΔu = 1
-#ts = 1ms
+#ts = 20ms
 begin
-    time = 10
-    Nθ = 1
-    NdΦ = 9
-    N2 = 20
-    Nu = 20
-    λθ = 0.8
-    λdΦ = 0.0
+    time = 5
+    N1 = 1
+    N2 = 5
+    Nu = 5
+    λθ = 0.7
+    λΔu = 0.075
+    λu = 0.4
 
     simulation()
 end
