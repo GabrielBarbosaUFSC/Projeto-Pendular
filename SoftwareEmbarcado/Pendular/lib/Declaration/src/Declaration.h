@@ -19,5 +19,19 @@
 #define SDA_PIN 21
 #define SCL_PIN 22
 
+#define AZ_bias 0.04
+#define AZ_K -1.06
+#define AY_bias 0
+#define AY_K 1
+#define GX_bias -1.5 
+#define R_accel 0.18449
+
+#define _RAD_TO_DEG 57.295779513
+#define _DEG_TO_RAD 0.01745329252
+
+void shift_array(double array[], double new_value, int len);
+void mul_matrix(double A[], int Ar, int Ac, double B[], double C[]);
+void sum_matrix(double A[], double B[], double C[], int len);
+
 
 #endif

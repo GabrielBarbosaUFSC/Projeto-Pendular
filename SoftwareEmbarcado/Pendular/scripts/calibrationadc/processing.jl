@@ -2,7 +2,7 @@ using DataFrames
 using CSV
 using Plots; plotly()
 using Polynomials 
-using  CurveFit
+using CurveFit
 
 function getdata(file)
     filepath = joinpath(@__DIR__, file)

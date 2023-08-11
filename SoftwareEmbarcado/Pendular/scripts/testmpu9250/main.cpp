@@ -6,7 +6,7 @@
 #define SCL_PIN 22
 #endif
  
-MPU9250_asukiaaa mySensor;
+MPU9250_asukiaaa mySensor(0x69);
  
 void setup() { 
 Serial.begin(115200);

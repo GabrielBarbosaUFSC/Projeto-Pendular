@@ -21,7 +21,6 @@ function get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
     firstuθ
     lastuθ
 
-
     MG_Y_freeθ= MG_Yθ[N1:N2,:]
     MGΔu_freeθ = MG_Δuθ[N1:N2,1:3]
     MGΔu_forcedθ = MG_Δuθ[N1:N2,4:4+Nu-1]

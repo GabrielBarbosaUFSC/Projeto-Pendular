@@ -133,7 +133,7 @@ class Motor{
          @brief Starts the motor
          @param ISR ISR function with encoder functions
         */
-        void begin(void ISR());
+        void begin(/*void ISR()*/);
 
         /**
          @brief routine to be called inside a ISR function

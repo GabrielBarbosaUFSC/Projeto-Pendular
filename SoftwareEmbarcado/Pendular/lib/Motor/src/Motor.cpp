@@ -81,7 +81,7 @@ double EncoderFilter::get_angle(){
 
 Motor::Motor(int SEN, int PWM, int ENC, int INV, int CHANNEL): 
     sen(SEN), pwm(PWM), enc(ENC), invert(INV), channel(CHANNEL){}
-void Motor::begin(void ISR()){
+void Motor::begin(/*void ISR()*/){
     pinMode(sen, OUTPUT);
     pinMode(pwm, OUTPUT);
     pinMode(enc, INPUT_PULLUP);
@@ -90,7 +90,7 @@ void Motor::begin(void ISR()){
     ledcAttachPin(pwm, channel);
     ledcWrite(channel, 2047);
 
-    attachInterrupt(enc, ISR, FALLING);
+    //attachInterrupt(enc, ISR, FALLING);
 
 }
 

@@ -3,6 +3,12 @@
 
 #include "Arduino.h"
 
+
+#define UNDEFINED 0
+#define WORKING 1
+#define SATURATED 2
+#define OFF 3
+
 class CtrlLED{
     private:
         const int pin_R; 
@@ -55,6 +61,15 @@ class CtrlLED{
          @brief Get the charging flag
         */
         bool get_charging();
+
+        /**
+         @brief Change LED state
+         @param UNDEFINED to off state 
+         @param WORKING working well
+         @param SATURATED motor saturated
+         @param OFF turned off
+        */
+        void change_state(int COMMAND);
       
 };
 

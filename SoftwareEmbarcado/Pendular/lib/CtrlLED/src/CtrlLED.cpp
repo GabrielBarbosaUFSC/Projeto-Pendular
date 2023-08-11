@@ -8,13 +8,14 @@ void CtrlLED::begin(){
     digitalWrite(pin_R, LOW);
     digitalWrite(pin_G, LOW);
 
-    xTaskCreate(
+    xTaskCreatePinnedToCore(
         update,
         "ledtask",
         5000,
         this,
         1,
-        NULL
+        NULL,
+        0
     );
 }
 
@@ -73,4 +74,17 @@ void CtrlLED::update(void *pV){
 
 bool CtrlLED::get_charging(){
     return charging;
+}
+
+void CtrlLED::change_state(int COMMAND){
+    static int past_state = 0;
+    if (COMMAND == past_state) return;
+    past_state = COMMAND;
+    switch (past_state){
+        case UNDEFINED: setcolor("F", 1000); break;
+        case WORKING: setcolor("G", 1000); break;
+        case SATURATED: setcolor("R", 1000); break;
+        case OFF: setcolor("RG", 200); break;
+        default: break;
+    }
 }

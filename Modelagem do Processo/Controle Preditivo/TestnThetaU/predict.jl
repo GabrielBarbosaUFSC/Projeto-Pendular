@@ -162,4 +162,11 @@ function get_matrixGain(Num, Den, N2)
     return MG_Y, firsty, lasty, MG_Δu, firstu, lastu
 end
 
+function shift_values(array, new)
+    for i in length(array)-1:-1:1
+        array[i+1] = array[i]
+    end
+    array[1] = new
+    return array
+end
 

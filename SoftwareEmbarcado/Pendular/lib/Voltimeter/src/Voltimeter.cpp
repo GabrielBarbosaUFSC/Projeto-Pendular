@@ -5,13 +5,14 @@ void Voltimeter::begin(bool create_task){
     pinMode(pin, INPUT);
     voltage = media();
     if(!create_task) return;
-    xTaskCreate(
+    xTaskCreatePinnedToCore(
         update,
         "loop2",
         5000,
         this,
         1, 
-        NULL
+        NULL,
+        0
     );
 }
                 
@@ -59,13 +60,14 @@ Voltimeters::Voltimeters(double G, int PIN_bat, int PIN_swt):
 void Voltimeters::begin(){
     bat.begin(false);
     swt.begin(false);
-    xTaskCreate(
+    xTaskCreatePinnedToCore(
         update,
         "voltimeters",
         5000,
         this, 
         1,
-        NULL
+        NULL, 
+        0
     );
 }
 
