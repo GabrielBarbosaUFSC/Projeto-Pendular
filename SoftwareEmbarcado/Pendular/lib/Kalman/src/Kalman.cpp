@@ -33,7 +33,7 @@ Kalman::Kalman() {
 };
 
 // The angle should be in degrees and the rate should be in degrees per second and the delta time in seconds
-double Kalman::getAngle(double newAngle, double newRate, double dt) {
+double Kalman::getAngle(double newAngle, double newRate, double pastRate, double t1, double t2) {
     // KasBot V2  -  Kalman filter module - http://www.x-firm.com/?page_id=145
     // Modified by Kristian Lauszus
     // See my blog post for more information: http://blog.tkjelectronics.dk/2012/09/a-practical-approach-to-kalman-filter-and-how-to-implement-it
@@ -42,7 +42,9 @@ double Kalman::getAngle(double newAngle, double newRate, double dt) {
     // Update xhat - Project the state ahead
     /* Step 1 */
     rate = newRate - bias;
-    angle += dt * rate;
+    //angle += dt * rate;
+    angle += 0.5*t1*(pastRate+newRate) + t2*newRate;
+    double dt = t1+t2;
 
     // Update estimation error covariance - Project the error covariance ahead
     /* Step 2 */

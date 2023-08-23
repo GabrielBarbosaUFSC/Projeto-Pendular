@@ -16,10 +16,10 @@ end
 
 pwm1, ω1, i1 = get_data("M1.csv")
 pwm2, ω2, i2 = get_data("M2.csv")
-pwm3, ω3, i3 = get_data("M3.csv")
+#pwm3, ω3, i3 = get_data("M3.csv")
 
 begin
-    plot([ω1 ω2 ω3], [i1 i2 i3], seriestype=:scatter)
+    plot([ω1 ω2], [i1 i2], seriestype=:scatter)
     title!("Sem carga: Speed x Current")    
 end
 
@@ -78,13 +78,17 @@ for i in eachindex(Veq)
 end
 
 begin
-    plot([Veq1 Veq2], [I1 I2], seriestype=:scatter)
-    title!("Sem carga: Veq x Current")    
+    plot([Veq1 Veq2], [I1 I2], seriestype=:scatter, label = ["Motor 1 e 2, horário" "Motor 1 e 2, antihorário"])
+    title!("Sem carga: Veq x Corrente")   
+    xaxis!("Tensão [V]")
+    yaxis!("Corrente [A]")
 end
 
 begin
-    plot([Veq1 Veq2], [ω1 ω2], seriestype=:scatter)
-    title!("Sem carga: Veq x Speed")    
+    plot([Veq1 Veq2], [ω1 ω2], seriestype=:scatter, label = ["Motor 1 e 2, horário" "Motor 1 e 2, antihorário"])
+    title!("Sem carga: Veq x Velocidade")    
+    xaxis!("Tensão [V]")
+    yaxis!("Velocidade [rad/s]")
 end
 
 begin
@@ -107,9 +111,11 @@ Ifitted2 = range(-0.120, 0, 300)
 
     
 begin
-    plot([Ifitted1 Ifitted2], [ω_fitted1 ω_fitted2])
-    plot!([I1 I2], [ω1 ω2], seriestype=:scatter)
-    title!("Current x Speed")    
+    plot([Ifitted1 Ifitted2], [ω_fitted1 ω_fitted2], label = ["fit horário" "fit antihorário"])
+    plot!([I1 I2], [ω1 ω2], seriestype=:scatter, label = ["Motor 1 e 2 horário" "Motor 1 e 2 antihorário"])
+    title!("Velocidade x Corrente")
+    xaxis!("Corrente [A]")
+    yaxis!("Velocidade [rad/s]")    
 end
 
 # kt/kv = 100.77

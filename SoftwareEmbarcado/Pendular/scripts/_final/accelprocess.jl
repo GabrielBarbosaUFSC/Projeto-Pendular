@@ -12,8 +12,6 @@ function get_data(path)
     raw_accel = dataframe[:,3]
     raw_gyro = dataframe[:,4]
     kalman_accel = dataframe[:,5]
-    
-
     return n, time, raw_accel, raw_gyro, kalman_accel
 end
 
@@ -24,21 +22,20 @@ for i in range(2,length(n))
     dtime[i-1] = time[i] - time[i-1]
 end
 
-# mean(dtime)
+mean(dtime)
 
-# plot(dtime)
+plot(dtime)
 
-# begin
-#     p1 = plot(time, [180/pi*raw_theta 180/pi*kalman_theta])
-#     p2 = plot(time, raw_gyro)
-#     p3 = plot(time, [180/pi*kalman_theta raw_gyro])
-#     plot(p1, p2, p3, layout=(3,1), size=(720,480))  
-# end
+mean(kalman_theta)
 
-
+begin
+    p1 = plot(time, [30/pi*raw_theta 180/pi*kalman_theta])
+    p2 = plot(time, raw_gyro)
+    p3 = plot(time, [180/pi*kalman_theta raw_gyro])
+    plot(p1, p2, p3, layout=(3,1), size=(720,480))  
+end
 
 plot(time, [theta_predict 180/pi*raw_theta])
-
 
 begin
     Q_angle = 0.001

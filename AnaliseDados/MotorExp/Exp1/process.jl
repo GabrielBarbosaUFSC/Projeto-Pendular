@@ -13,10 +13,12 @@ end
 
 Vdc1, Id1 = get_data("M1.csv")
 Vdc2, Id2 = get_data("M2.csv")
-Vdc3, Id3 = get_data("M3.csv")
+#Vdc3, Id3 = get_data("M3.csv")
 
 begin
-    plot([Vdc1 Vdc2 Vdc3], [Id1 Id2 Id3], seriestype=:scatter)
+    #plot([Vdc1 Vdc2 Vdc3], [Id1 Id2 Id3], seriestype=:scatter)
+    plot([Vdc1 Vdc2], [Id1 Id2], seriestype=:scatter)
+
     title!("Motor Desligado: Vdc x Current")    
 end
 
@@ -39,9 +41,12 @@ Vdcfitted = range(12, 17, 300)
 Idfitted = [Idfit(Vdci, pfit) for Vdci in Vdcfitted]
 
 begin
-    plot(Vdcfitted, Idfitted)
-    plot!(Vdc, Id, seriestype=:scatter)
+    plot(Vdcfitted, Idfitted, label = "Fit")
+    plot!(Vdc1, Id1, seriestype=:scatter, label = "Motor 1")
+    plot!(Vdc2, Id2, seriestype=:scatter, label = "Motor 2")
     title!("Motor M1 e M2 Fit: Vdc x Id")
+    xaxis!("Tensão da Bateria [V]")
+    yaxis!("Corrente [A]")
 end
 
 #Id da tensão nominal das baterias

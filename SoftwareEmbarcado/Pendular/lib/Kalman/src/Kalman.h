@@ -23,7 +23,7 @@ public:
     Kalman();
 
     // The angle should be in degrees and the rate should be in degrees per second and the delta time in seconds
-    double getAngle(double newAngle, double newRate, double dt);
+    double getAngle(double newAngle, double newRate, double pastRate, double t1, double t2);
 
     void setAngle(double angle); // Used to set angle, this should be set as the starting angle
     double getRate(); // Return the unbiased rate

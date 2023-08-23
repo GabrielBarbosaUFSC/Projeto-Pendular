@@ -5,6 +5,13 @@
 #include "Kalman.h"
 #include "MPU9250_asukiaaa.h"
 
+struct ThetaInfo{
+    double theta;
+    int64_t time;
+};
+
+#define BUFFER_SIZE 25
+
 class Accel{
     private:
         MPU9250_asukiaaa accelunit;
@@ -13,6 +20,16 @@ class Accel{
         double theta;
         double raw_theta;
         double raw_gyro;
+
+        double past_rate;
+        
+        ThetaInfo theta_ = {0, esp_timer_get_time()};
+
+        ThetaInfo buffer[BUFFER_SIZE];
+        int index_ = 0;
+
+        void add_to_buffer(ThetaInfo add);
+
     public:
         /**
          @brief Class Constructor
@@ -49,7 +66,12 @@ class Accel{
         /**
          @brief Get filtered theta
         */
-        double filtered();
+        double filtered(bool raw = false);
+
+        ThetaInfo get_thetainfo();
+
+        ThetaInfo get_theta_delay(int64_t time);
+
 };
 
 #endif

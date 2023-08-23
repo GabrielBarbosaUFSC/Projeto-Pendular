@@ -10,11 +10,19 @@ using Plots; plotly()
 
 θp = [θp0, θp1, θp2, θp3]
 Hθ = tf(zpk([θz0], θp, θk))
+Hθ_delay = Hθ*delay(1e-3)
 
 setPlotScale("dB")
-bodeplot(Hθ)
+bodeplot(Hθ, label = ["G_Hθ" "P_Hθ"])
 
-Hdθ = c2d(Hθ, 20e-3)
+Hdθ = c2d(Hθ, 10e-3)
+
+Hdθ_delay = c2d(Hθ_delay, 10e-3)
+
+2pi/200
+
+
+
 
 # Φz0 = 7.632741006069605
 # Φz1 = -7.632741032008387

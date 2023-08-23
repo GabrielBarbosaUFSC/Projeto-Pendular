@@ -16,17 +16,27 @@ function get_data(path)
     U = dataframe[:,7]
     Vbat = dataframe[:,8]
     PWM = dataframe[:,9]
+    computetime  = dataframe[:,10]
+    sensortime = dataframe[:,11]
 
-    return n, time, theta, dUθ, dUu, U, Vbat, PWM
+    return n, time, theta, dUθ, dUu, U, Vbat, PWM, computetime, sensortime
 end
 
-n, time, theta, dUθ, dUu, U, Vbat, PWM = get_data("data.csv")
+n, time, theta, dUθ, dUu, U, Vbat, PWM, computetime, sensortime = get_data("data.csv")
 
 dtime = zeros(length(n)-1)
-for i in range(2,200)
+for i in range(2,500)
     dtime[i-1] = time[i] - time[i-1]
 end
 
-plot(time, [180*theta/pi, PWM])
+plot(dtime)
+
+mean(sensortime)
+plot(sensortime)
+
+plot(time, [180*theta/pi, PWM, U])
+
+plot(computetime)
+
 plot(time, U)
 plot(time, PWM)

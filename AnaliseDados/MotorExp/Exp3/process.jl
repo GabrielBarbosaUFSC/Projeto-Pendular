@@ -13,11 +13,14 @@ end
 
 pwm1, i1 = get_data("M1.csv")
 pwm2, i2 = get_data("M2.csv")
-pwm3, i3 = get_data("M3.csv")
+#pwm3, i3 = get_data("M3.csv")
 
 begin
-    plot([pwm1 pwm2 pwm3], [i1 i2 i3], seriestype=:scatter)
-    title!("Motor travado: PWM x Current")    
+    #plot([pwm1 pwm2 pwm3], [i1 i2 i3], seriestype=:scatter)
+    plot([pwm1 pwm2], [i1 i2], seriestype=:scatter, label = ["Motor 1" "Motor 2"])
+    title!("Motor travado: Corrente x n") 
+    xaxis!("n")   
+    yaxis!("Corrente")
 end
 
 #---Processing
@@ -40,24 +43,26 @@ begin
 end
 
 
-function fitting(I, Vdc)
+function fitting(I, Vdc, Ii, If)
     Veq(If, p) = @. p[1]*If + p[2]
     p0 = [0.1, 0]
     pf = curve_fit(Veq, I, Vdc, p0).param
     
-    Ifit = range(-2.5, 2.5, 300)
+    Ifit = range(Ii, If, 300)
     Vdcfit = [Veq(i, pf) for i in Ifit]
     
     
-    p = plot(Ifit, Vdcfit)
-    plot!(I, Vdc, seriestype=:scatter)
-    title!("Motor M1 e M2 Fit: Id x Vdc")
+    p = plot(Ifit, Vdcfit, label = "fit")
+    plot!(I, Vdc, seriestype=:scatter, label = "Motor 1 e Motor 2")
+    title!("Motor Travado Fit: Veq x Id, antihorário")
+    yaxis!("Tensão")
+    xaxis!("Corrente")
     
     return pf, p
 end
 
-pf1, p1  =fitting(I1, V1)
-pf2, p2 = fitting(I2, V2)
+pf1, p1  =fitting(I1, V1, -2, 0)
+pf2, p2 = fitting(I2, V2, 0, 2)
 
 re = (pf1[1] + pf2[1])/2
 v0 = (-pf1[2] + pf2[2])/2
