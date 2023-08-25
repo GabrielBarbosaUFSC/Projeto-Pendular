@@ -18,7 +18,10 @@ const int n_rows_free = 3;
 const int n_theta = 5;
 const int n_du = 4;
 
-double theta_bias = 0.016;
+double theta_bias = -0.017; //0.016; 014
+double gain_ajust = 0.9;  //1.02;
+double bias_ajust = -2; //-2;
+
 double free_response_du[n_rows_free];
 double free_response_theta[n_rows_free];
 double free_response[n_rows_free];
@@ -98,7 +101,9 @@ struct apply_return{
 };
 
 apply_return apply_voltage(double U){
-    double V0 = 3.47;
+    //double V0 = 3.47;
+    double V0 = 3.47 + bias_ajust;
+
     double bat_voltage = voltimeters.get_swt();
     if (bat_voltage < 7.0){
         leds.change_state(OFF);
@@ -106,10 +111,14 @@ apply_return apply_voltage(double U){
     }
     
     double abs_pwm = 0;
-    if (abs(U) > 0.01)
-        abs_pwm = (abs(U) + V0)/bat_voltage;
-    else
-       U = 0;
+    double gain_U = U*gain_ajust;
+    if (abs(gain_U) > 0.01)
+        abs_pwm = (abs(gain_U) + V0)/bat_voltage;
+    else{
+        U = 0;
+        gain_U = 0; 
+    }
+       
 
     #ifdef DEBUG_APPLY 
         double abs_pwm2 = abs_pwm; 

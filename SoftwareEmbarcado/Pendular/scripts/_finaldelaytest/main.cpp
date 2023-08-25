@@ -18,7 +18,10 @@ const int n_rows_free = 3;
 const int n_theta = 5;
 const int n_du = 4;
 
-double theta_bias = 0.016;
+double theta_bias = -0.014; //0.016; 014
+double gain_ajust = 0.9;  //1.02;
+double bias_ajust = -2; //-2;
+
 double free_response_du[n_rows_free];
 double free_response_theta[n_rows_free];
 double free_response[n_rows_free];
@@ -98,7 +101,9 @@ struct apply_return{
 };
 
 apply_return apply_voltage(double U){
-    double V0 = 3.47;
+    //double V0 = 3.47;
+    double V0 = 3.47 + bias_ajust;
+
     double bat_voltage = voltimeters.get_swt();
     if (bat_voltage < 7.0){
         leds.change_state(OFF);
@@ -106,10 +111,14 @@ apply_return apply_voltage(double U){
     }
     
     double abs_pwm = 0;
-    if (abs(U) > 0.01)
-        abs_pwm = (abs(U) + V0)/bat_voltage;
-    else
-       U = 0;
+    double gain_U = U*gain_ajust;
+    if (abs(gain_U) > 0.01)
+        abs_pwm = (abs(gain_U) + V0)/bat_voltage;
+    else{
+        U = 0;
+        gain_U = 0; 
+    }
+       
 
     #ifdef DEBUG_APPLY 
         double abs_pwm2 = abs_pwm; 
@@ -219,6 +228,15 @@ void print_data(){
     while(true);
 }
 
+
+int64_t pulsecounter = 0;
+void IRAM_ATTR counter(){
+    if(U > 0)
+        pulsecounter++;
+    else
+        pulsecounter--;
+}
+
 void IRAM_ATTR control(){
     int64_t pasttime = esp_timer_get_time();
     ThetaInfo thetainfo = accel.get_theta_delay(pasttime - 10000);
@@ -236,6 +254,18 @@ void IRAM_ATTR control(){
     mul_matrix(f_theta, n_rows_free, n_theta, theta, free_response_theta);
     mul_matrix(f_du, n_rows_free, n_du, du, free_response_du);
     sum_matrix(free_response_du, free_response_theta, free_response, n_rows_free);
+
+    double thetamax = 0.005;
+    double kp = thetamax/60.0;
+    double err = 0.032*pulsecounter*kp;
+
+    if(err > thetamax) err = thetamax;
+    if(err < -thetamax) err = -thetamax;
+
+    for (int i = 0; i < n_rows_free; i++){
+        free_response[i]  += err;
+    }
+
     mul_matrix(K1_theta, 1, n_rows_free, free_response, dU);
     
     double dU_theta = dU[0];
@@ -338,6 +368,7 @@ void setup(){
     timerAttachInterrupt(control_timer, &control, true);
     timerAlarmWrite(control_timer, 4*time_control, true);
     timerAlarmEnable(control_timer);
+    attachInterrupt(PIN_M1_ENC, counter, RISING);
 }
 
 void loop() {

@@ -3,15 +3,21 @@ include("savematrix.jl")
 using Plots; plotly()
 using Noise
 using CSV, Tables
+using Latexify
 
 
 function simulation()
     len = Int(trunc(time/ts))
 
-    K1θ, MG_Y_freeθ, MGΔu_freeθ, K1u = get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
+    K1θ, MG_Y_freeθ, MGΔu_freeθ, K1u, Kfullθ, Kfullu, MGΔu_forcedθ = get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
+
+    println(latexify(K1θ; fmt=FancyNumberFormatter(3)))
+    println(latexify(K1u; fmt=FancyNumberFormatter(3)))
+    
+
     @printf "k1u[1] = %f" K1u[1]
-    labels = ["f_du", "f_theta", "K1_theta", "K1_u"]
-    matrix = [MGΔu_freeθ, MG_Y_freeθ, K1θ, K1u]
+    labels = ["f_du", "f_theta", "K1_theta", "K1_u", "K1fulltheta", "K1fullu", "G"]
+    matrix = [MGΔu_freeθ, MG_Y_freeθ, K1θ, K1u, Kfullθ, Kfullu, MGΔu_forcedθ]
 
     save_matrix_to_array_c(matrix, labels, "Gain_GPC")
     save_matrix_to_jl(matrix, labels, "Gain_GPC")
@@ -73,7 +79,7 @@ function simulation()
 
     plotθ = plot(t, [180/pi*(x[:,2])], label="Θ")
     yaxis!(plotθ, "θ[°]" )
-    title!(plotθ, "N1 = 1; N2 = 15; Nu = 15; θi = 10°")
+    title!(plotθ, "N1 = 2; N2 = 4; Nu = 3; θi = 10°")
     
     plotu = plot(t, x[:,5], label="tm")
     yaxis!(plotu, "Torque [Nm]")
@@ -97,12 +103,28 @@ begin
     θ0 = pi/18
     time = 3
     N1 = 2
-    N2 = 7
-    Nu = 6
+    N2 = 4
+    Nu = 3
 
-    λθ = 0.7
-    λΔu = 0.4
-    λu = 0.01
+    λθ = 1
+    λΔu = 0.6
+    λu = 0.00
 
     simulation()
 end
+
+# begin
+#     Vsat = 10
+#     θ0 = pi/18
+#     time = 3
+#     N1 = 2
+#     N2 = 7
+#     Nu = 6
+
+#     λθ = 0.7
+#     λΔu = 0.4
+#     λu = 0.01
+
+#     simulation()
+# end
+

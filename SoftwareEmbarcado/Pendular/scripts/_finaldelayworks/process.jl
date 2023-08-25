@@ -41,3 +41,6 @@ plot(computetime)
 
 plot(time, U)
 plot(time, PWM)
+
+f = 12*6.7/2/pi
+ts = 1/f

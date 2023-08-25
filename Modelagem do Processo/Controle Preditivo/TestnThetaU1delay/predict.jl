@@ -92,7 +92,7 @@ function get_G_Δu(B, Ej)
 
     return G_Δu, first_u, last_u
 end
-function get_K1(G1, λ1, G2, λ2, λu)
+function get_K1(G1, λ1, G2, λ2, λu, returnfull = false)
     Nu = length(G1[1,:])
     N1 = length(G1[:,1])
     N2 = length(G2[:,1])
@@ -110,7 +110,11 @@ function get_K1(G1, λ1, G2, λ2, λu)
 
     K1 = -iA*G1t*Q1
     K2 = -iA*G2t*Q2
-    return K1[1,:], K2[1,:]
+    if returnfull
+        return K1[1,:], K2[1,:], K1, K2
+    else
+        return K1[1,:], K2[1,:]
+    end
 end
 
 function triangle_matrix(N, Nu)

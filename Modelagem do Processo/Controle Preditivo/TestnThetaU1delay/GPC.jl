@@ -1,6 +1,7 @@
 include("predict.jl")
 using LinearAlgebra
 using Printf
+using Latexify
 
 function get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
     # N1 = 1
@@ -20,18 +21,38 @@ function get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
     Gainu = λu/u_bound^2
     GainΔu = λΔu/Nu/Δu_bound^2
 
+
+    @printf "\nN1 = %d" N1
+    @printf "\nN2 = %d" N2
+    @printf "\nNu = %d" Nu
+    @printf "\n Gainθ = %.4f" Gainθ
+    @printf "\n Gainu = %.4f" Gainu
+    @printf "\n GainΔu = %.4f" GainΔu
+
+
     #ts = 10ms
    
     Numθ = ( -0.0022885069917117917z^3 + 0.0015904058880837901z^2 + 0.0006976931945916441z + 4.079090360793572e-7)z^(-5)
     Denθ = (1.0z^4 - 2.007876236602047z^3 + 1.0050730397564838z^2 - 0.0015548225118057796z + 6.664713969501098e-9)z^(-4)
 
     MG_Yθ, firstyθ, lastyθ, MG_Δuθ, firstuθ, lastuθ = get_matrixGain(Numθ, Denθ, N2)
-    firstyθ
-    lastyθ
-    firstuθ
-    lastuθ
-    @printf "\nlastuθ = %d" lastuθ 
-    @printf "\nfirstuθ = %d" firstuθ
+    
+    # println("MG_Yθ:")
+    # println(latexify(MG_Yθ; fmt=FancyNumberFormatter(3)))
+    
+    # println("\nMG_Δufθ:")
+    # println(latexify(MG_Δuθ[:,1:4]; fmt=FancyNumberFormatter(3)))
+    
+    # println("\nG")
+    # println(latexify(MG_Δuθ[:,5:end]; fmt=FancyNumberFormatter(3)))
+
+
+    # firstyθ
+    # lastyθ
+    # firstuθ
+    # lastuθ
+    # @printf "\nlastuθ = %d" lastuθ 
+    # @printf "\nfirstuθ = %d" firstuθ
 
     
     MG_Δuθ
@@ -56,8 +77,8 @@ function get_matrix_θ(N1, N2, Nu, λθ, λu, λΔu)
 
     M = ones(1, Nu)
     
-    K1θ, K1u = get_K1(MGΔu_forcedθ, Gainθ, M, Gainu, GainΔu)
-    return K1θ, MG_Y_freeθ, MGΔu_freeθ, K1u
+    K1θ, K1u, Kfullθ, Kfullu  = get_K1(MGΔu_forcedθ, Gainθ, M, Gainu, GainΔu, true)
+    return K1θ, MG_Y_freeθ, MGΔu_freeθ, K1u, Kfullθ, Kfullu, MGΔu_forcedθ
 end
 
 

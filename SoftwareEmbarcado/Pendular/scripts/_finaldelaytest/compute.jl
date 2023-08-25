@@ -57,3 +57,5 @@ plot(time, [y0 f4])
 
 plot(time, [y0 phased_free])
 plot(time, du)
+
+2pi*3.5/691
