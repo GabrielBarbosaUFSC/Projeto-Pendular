@@ -1,0 +1,4 @@
+- Medição de posição das rodas
+- Obtençaõ dos momentos de inercia
+- revisar o filtro de kalman / realizar testes de queda
+- 
